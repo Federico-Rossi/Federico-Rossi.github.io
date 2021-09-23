@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=DM+Serif+Text:ital@0;1&display=swap');
+
+.gogfon {
+	font-family: "Bree Serif";
+}
+
+.sfondo {
+	width: auto;
+	padding: 16px;
+}
+
+.bordo {
+	border-radius: 10px 10px 10px 10px;
+	background-color: white;
+	padding: 7px;
+	margin-top: 10px;
+}
+
+.titolo {
+	color: 	#005387;
+	font-family: DM Serif Text;
+}
+
+.banner {
+	background-color: #343A40;
+	height: auto;
+	color: white;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.immagine {
+	border-radius: 15px;
+	padding-bottom: 15px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	margin-top: 10px;
+	max-width: 215px;
+	text-align: center;
+}
+
