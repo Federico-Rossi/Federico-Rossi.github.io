@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007acc;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Stile per l'header moderno */
+.modern-header {
+    background-color: #007acc;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modern-header h1 {
+    font-size: 36px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Stile per il testo */
+.container h2,
+.container p {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Altri stili rimangono invariati */
+.container {
+    /* Resto del tuo stile per .container */
+}
+
+/* Stile per il footer */
+footer {
+	
+    margin: 0px auto 0px auto ;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
