@@ -3,34 +3,601 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domande Biochimica</title>
     <link rel="stylesheet" href="style.css">
-    <title>Portfolio di Federico Rossi</title>
 </head>
 <body>
-    <header class="modern-header">
-        <h1>Portfolio di Federico Rossi</h1>
-    </header>
-    <div class="container">
-        <h2>Informazioni personali</h2>
-        <p><strong>Nome:</strong> Federico Rossi</p>
-        <p><strong>Diploma delle superiori:</strong> Conseguito al I.T.I.S. Ferruccio Viola nel 2023</p>
-        <p><strong>Esperienza Lavorativa:</strong></p>
-        <p>Lavorato nella pizzeria di famiglia "Pizzeria Monica" come pizzaiolo per un anno. Durante questa esperienza, ho acquisito abilità nel preparare pizza tradizionale italiana.</p>
-        <p>Eseguito uno stage presso la "Croesus SRL", un'azienda di serramenti. Durante lo stage, ho lavorato su progetti di progettazione e produzione di serramenti su misura.</p>
-        <p><strong>Abilità:</strong></p>
-        <ul>
-            <li>Apprendimento rapido</li>
-            <li>Pensiero logico</li>
-            <li>Rapido adattamento</li>
-        </ul>
-    </div>
-    <footer>
-        <div>
-            <h2>Contatti</h2>
-            <p><strong>Email:</strong> fede.2122004@gmail.com</p>
-            <p><strong>Telefono:</strong> +39 324 889 471</p>
-            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/rossi1275" target="_blank">Clicca Qui</a></p>
+
+    <h1>Domande Biochimica</h1>
+    <form id="quizForm">
+        <!-- Domanda 1 -->
+        <div class="question-card" id="q1-container">
+            <h3>1. Quale particella atomica determina il comportamento chimico di un atomo?</h3>
+            <label><input type="radio" name="q1" value="Elettrone"> Elettrone</label><br>
+            <label><input type="radio" name="q1" value="Neutrone"> Neutrone</label><br>
+            <label><input type="radio" name="q1" value="Protone"> Protone</label><br>
+            <label><input type="radio" name="q1" value="Nucleo"> Nucleo</label>
+            <p class="feedback" id="q1-feedback"></p>
         </div>
-    </footer>
+
+        <!-- Domanda 2 -->
+        <div class="question-card" id="q2-container">
+            <h3>2. Gli atomi sono costituiti da tre particelle fondamentali. Che carica hanno?</h3>
+            <label><input type="radio" name="q2" value="Protone (+1); neutrone (-1) ed elettrone (0)"> Protone (+1); neutrone (-1) ed elettrone (0)</label><br>
+            <label><input type="radio" name="q2" value="Protone (-1), neutrone (0) ed elettrone (+1)"> Protone (-1), neutrone (0) ed elettrone (+1)</label><br>
+            <label><input type="radio" name="q2" value="Protone (-1), neutrone (+1) ed elettrone (0)"> Protone (-1), neutrone (+1) ed elettrone (0)</label><br>
+            <label><input type="radio" name="q2" value="Protone (+1), neutrone (0) ed elettrone (-1)"> Protone (+1), neutrone (0) ed elettrone (-1)</label>
+            <p class="feedback" id="q2-feedback"></p>
+        </div>
+
+        <!-- Domanda 3 -->
+        <div class="question-card" id="q3-container">
+            <h3>3. Un legame covalente doppio è formato da ________ di elettroni</h3>
+            <label><input type="radio" name="q3" value="2 paia"> 2 paia</label><br>
+            <label><input type="radio" name="q3" value="4 paia"> 4 paia</label><br>
+            <label><input type="radio" name="q3" value="3 paia"> 3 paia</label><br>
+            <label><input type="radio" name="q3" value="1 paio"> 1 paio</label>
+            <p class="feedback" id="q3-feedback"></p>
+        </div>
+
+        <!-- Domanda 4 -->
+        <div class="question-card" id="q4-container">
+            <h3>4. Gli isotopi differiscono tra loro nel numero di ________</h3>
+            <label><input type="radio" name="q4" value="Neutroni"> Neutroni</label><br>
+            <label><input type="radio" name="q4" value="Neutroni e protoni"> Neutroni e protoni</label><br>
+            <label><input type="radio" name="q4" value="Protoni"> Protoni</label><br>
+            <label><input type="radio" name="q4" value="Elettroni"> Elettroni</label>
+            <p class="feedback" id="q4-feedback"></p>
+        </div>
+
+        <!-- Domanda 5 -->
+        <div class="question-card" id="q5-container">
+            <h3>5. Atomi con elettronegatività uguale o molto simile formano in genere</h3>
+            <label><input type="radio" name="q5" value="legami covalenti non polari/apolari"> legami covalenti non polari/apolari</label><br>
+            <label><input type="radio" name="q5" value="legami ionici"> legami ionici</label><br>
+            <label><input type="radio" name="q5" value="legami covalenti polari"> legami covalenti polari</label><br>
+            <label><input type="radio" name="q5" value="nessun legame"> nessun legame</label>
+            <p class="feedback" id="q5-feedback"></p>
+        </div>
+
+        <!-- Domanda 6 -->
+        <div class="question-card" id="q6-container">
+            <h3>6. Quale molecola o composto tra i seguenti contiene un legame covalente omopolare o puro?</h3>
+            <label><input type="radio" name="q6" value="SCl6"> SCl6</label><br>
+            <label><input type="radio" name="q6" value="Li2CO3"> Li2CO3</label><br>
+            <label><input type="radio" name="q6" value="NaCl"> NaCl</label><br>
+            <label><input type="radio" name="q6" value="Br2"> Br2</label>
+            <p class="feedback" id="q6-feedback"></p>
+        </div>
+
+        <!-- Domanda 7 -->
+        <div class="question-card" id="q7-container">
+            <h3>7. Quale/i delle seguenti affermazioni è/sono CORRETTA/E?</h3>
+            <h4>I i legami ionici si formano quando uno o più elettroni di valenza sono trasferiti da un atomo all altro </h4>
+            <h4>II i legami covalenti consistono nella condivisione di elettroni tra atomi </h4>
+            <h4>III in molti composti legati in modo covalente gli elettroni NON sono condivisi equamente tra gli atomi</h4>
+            <label><input type="radio" name="q7" value="1, 2 e 3"> 1, 2 e 3 </label><br>
+            <label><input type="radio" name="q7" value="2"> 2</label><br>
+            <label><input type="radio" name="q7" value="1 e 2"> 1 e 2</label><br>
+            <label><input type="radio" name="q7" value="1"> 1</label>
+            <p class="feedback" id="q7-feedback"></p>
+        </div>
+
+        <!-- Domanda 8 -->
+        <div class="question-card" id="q8-container">
+            <h3>8. Una reazione chimica si dice spontanea se:</h3>
+            <label><input type="radio" name="q8" value="Viene utilizzato un catalizzatore"> Viene utilizzato un catalizzatore</label><br>
+            <label><input type="radio" name="q8" value="ΔG° < 0"> ΔG° < 0</label><br>
+            <label><input type="radio" name="q8" value="ΔG° > 0"> ΔG° > 0</label><br>
+            <label><input type="radio" name="q8" value="G° = 0"> G° = 0</label>
+            <p class="feedback" id="q8-feedback"></p>
+        </div>
+
+        <!-- Domanda 9 -->
+        <div class="question-card" id="q9-container">
+            <h3>9. Quale delle seguenti affermazioni descrive correttamente una reazione con ΔG negativo?</h3>
+            <label><input type="radio" name="q9" value="La reazione avviene molto rapidamente"> La reazione avviene molto rapidamente</label><br>
+            <label><input type="radio" name="q9" value="Non presenta uno stato di transizione"> Non presenta uno stato di transizione</label><br>
+            <label><input type="radio" name="q9" value="La reazione è esoergonica"> La reazione è esoergonica</label><br>
+            <label><input type="radio" name="q9" value="I prodotti sono meno stabili dei reagenti"> I prodotti sono meno stabili dei reagenti</label>
+            <p class="feedback" id="q9-feedback"></p>
+        </div>
+
+        <!-- Domanda 10 -->
+        <div class="question-card" id="q10-container">
+            <h3>10. Quale delle seguenti affermazioni riguardanti il pH NON è VERA?</h3>
+            <label><input type="radio" name="q10" value="Molte reazioni fisiologiche sono sensibili al pH"> Molte reazioni fisiologiche sono sensibili al pH</label><br>
+            <label><input type="radio" name="q10" value="In una soluzione tampone, il pH cambia poco con l’aggiunta di piccole quantità di un acido o una base forte
+                "> In una soluzione tampone, il pH cambia poco con l’aggiunta di piccole quantità di un acido o una base forte
+            </label><br>
+            <label><input type="radio" name="q10" value="pH = log [H+]"> pH = log [H+]</label><br>
+            <label><input type="radio" name="q10" value="Il pH dell’acqua pura è 7"> Il pH dell’acqua pura è 7</label>
+            <p class="feedback" id="q10-feedback"></p>
+        </div>
+
+        <!-- Domanda 11 -->
+        <div class="question-card" id="q11-container">
+            <h3>11. Quali gruppi funzionali contiene la seguente molecola?</h3>
+            <img src="domada11.png" alt="Molecola chimica" class="question-image">
+            <div class="options">
+                <label><input type="radio" name="q11" value="Un'ammina primaria e un acido carbossilico"> Un'ammina primaria e un acido carbossilico</label><br>
+                <label><input type="radio" name="q11" value="Un'ammina primaria, un chetone e un alcol"> Un'ammina primaria, un chetone e un alcol</label><br>
+                <label><input type="radio" name="q11" value="Un'ammina secondaria e un acido carbossilico"> Un'ammina secondaria e un acido carbossilico</label><br>
+                <label><input type="radio" name="q11" value="Un'ammina secondaria e un alcol"> Un'ammina secondaria e un alcol</label>
+            </div>
+            <p class="feedback" id="q11-feedback"></p>
+        </div>
+
+        <!-- Domanda 12 -->
+        <div class="question-card" id="q12-container">
+            <h3>12. I gruppi funzionali:</h3>
+            <label><input type="radio" name="q12" value="Conferiscono al composto una reattività tipica e simile a quella di altri composti contenenti lo stesso gruppo"> Conferiscono al composto una reattività tipica e simile a quella di altri composti contenenti lo stesso gruppo</label><br>
+            <label><input type="radio" name="q12" value="Determinano esclusivamente le caratteristiche fisiche di una molecola"> Determinano esclusivamente le caratteristiche fisiche di una molecola</label><br>
+            <label><input type="radio" name="q12" value="Contengono esclusivamente ossigeno e azoto"> Contengono esclusivamente ossigeno e azoto</label><br>
+            <label><input type="radio" name="q12" value="Non influenzano in nessun modo la reattività della molecola"> Non influenzano in nessun modo la reattività della molecola</label>
+            <p class="feedback" id="q12-feedback"></p>
+        </div>
+
+        <!-- Domanda 13 -->
+        <div class="question-card" id="q13-container">
+            <h3>13. Una molecola è chirale se:</h3>
+            <label><input type="radio" name="q13" value="Non possiede una forma enantiomerica"> Non possiede una forma enantiomerica</label><br>
+            <label><input type="radio" name="q13" value="Presenta un centro di simmetria"> Presenta un centro di simmetria</label><br>
+            <label><input type="radio" name="q13" value="È sovrapponibile alla sua immagine speculare"> È sovrapponibile alla sua immagine speculare</label><br>
+            <label><input type="radio" name="q13" value="Non è sovrapponibile alla sua immagine speculare"> Non è sovrapponibile alla sua immagine speculare</label>
+            <p class="feedback" id="q13-feedback"></p>
+        </div>
+
+        <!-- Domanda 14 -->
+        <div class="question-card" id="q14-container">
+            <h3>14. Le reazioni tendono ad avvenire più _________ all’aumentare della temperatura perché ________ il numero di collisioni molecolari con sufficiente energia per superare _________</h3>
+            <label><input type="radio" name="q14" value="velocemente; diminuisce; l’energia di attivazione"> velocemente; diminuisce; l’energia di attivazione</label><br>
+            <label><input type="radio" name="q14" value="lentamente; aumenta; l’energia di attivazione"> lentamente; aumenta; l’energia di attivazione</label><br>
+            <label><input type="radio" name="q14" value="velocemente; aumenta; l’energia di attivazione"> velocemente; aumenta; l’energia di attivazione</label><br>
+            <label><input type="radio" name="q14" value="lentamente; diminuisce; l’entalpia"> lentamente; diminuisce; l’entalpia</label>
+            <p class="feedback" id="q14-feedback"></p>
+        </div>
+        
+        <!-- Domanda 15 -->
+        <div class="question-card" id="q15-container">
+            <h3>15. Quale delle seguenti affermazioni è errata?</h3>
+            <label><input type="radio" name="q15" value="Due enantiomeri ruotano il piano della luce polarizzata dello stesso angolo ma in direzione opposta"> Due enantiomeri ruotano il piano della luce polarizzata dello stesso angolo ma in direzione opposta</label><br>
+            <label><input type="radio" name="q15" value="Gli enantiomeri sono immagini speculari non sovrapponibili"> Gli enantiomeri sono immagini speculari non sovrapponibili</label><br>
+            <label><input type="radio" name="q15" value="Due enantiomeri hanno diverse proprietà fisiche"> Due enantiomeri hanno diverse proprietà fisiche</label><br>
+            <label><input type="radio" name="q15" value="Gli enantiomeri sono stereoisomeri"> Gli enantiomeri sono stereoisomeri</label>
+            <p class="feedback" id="q15-feedback"></p>
+        </div>
+
+        <!-- Domanda 16 -->
+        <div class="question-card" id="q16-container">
+            <h3>16. Quali dei seguenti composti sono zwitterioni?</h3>
+            <img src="domanda16.jpeg" alt="Molecola chimica" class="question-image">
+            <div class="options">
+            <label><input type="radio" name="q16" value="1, 2, 3"> 1, 2, 3</label><br>
+            <label><input type="radio" name="q16" value="1, 2"> 1, 2</label><br>
+            <label><input type="radio" name="q16" value="1, 2, 3, 4"> 1, 2, 3, 4</label><br>
+            <label><input type="radio" name="q16" value="4"> 4</label>
+            </div>
+            <p class="feedback" id="q16-feedback"></p>
+        </div>
+
+        <!-- Domanda 17 -->
+        <div class="question-card" id="q17-container">
+            <h3>17. Quale delle seguenti molecole è un a-aminoacido?</h3>
+            <img src="domanda17.jpeg" alt="Molecola chimica" class="question-image">
+            <div class="options">
+            <label><input type="radio" name="q17" value="IV"> IV</label><br>
+            <label><input type="radio" name="q17" value="II"> II</label><br>
+            <label><input type="radio" name="q17" value="I"> I</label><br>
+            <label><input type="radio" name="q17" value="III"> III</label>
+            </div>
+            <p class="feedback" id="q17-feedback"></p>
+        </div>
+
+        <!-- Domanda 18 -->
+        <div class="question-card" id="q18-container">
+            <h3>18. Cosa si intende per punto isoelettrico (pI)?</h3>
+            <label><input type="radio" name="q18" value="Il pH a cui un amminoacido, un polipeptide, o una proteina hanno carica negativa"> Il pH a cui un amminoacido, un polipeptide, o una proteina hanno carica negativa</label><br>
+            <label><input type="radio" name="q18" value="Il pI è una caratteristica degli amminoacidi neutri"> Il pI è una caratteristica degli amminoacidi neutri</label><br>
+            <label><input type="radio" name="q18" value="Il pH a cui un amminoacido, un polipeptide, o una proteina hanno carica positiva"> Il pH a cui un amminoacido, un polipeptide, o una proteina hanno carica positiva</label><br>
+            <label><input type="radio" name="q18" value="Il pH a cui un amminoacido, un polipeptide, o una proteina non hanno carica netta"> Il pH a cui un amminoacido, un polipeptide, o una proteina non hanno carica netta</label>
+            <p class="feedback" id="q18-feedback"></p>
+        </div>
+
+        <!-- Domanda 19 -->
+        <div class="question-card" id="q19-container">
+            <h3>19. Ad un pH più acido rispetto al suo punto isoelettrico (pI), un amminoacido porterà:</h3>
+            <label><input type="radio" name="q19" value="una carica netta negativa"> una carica netta negativa</label><br>
+            <label><input type="radio" name="q19" value="una carica netta positiva"> una carica netta positiva</label><br>
+            <label><input type="radio" name="q19" value="una carica positiva pari alla carica negativa"> una carica positiva pari alla carica negativa</label><br>
+            <label><input type="radio" name="q19" value="nessuna carica ionica"> nessuna carica ionica</label>
+            <p class="feedback" id="q19-feedback"></p>
+        </div>
+
+        <!-- Domanda 20 -->
+        <div class="question-card" id="q20-container">
+            <h3>20. Nell’immagine è rappresentata la struttura dell’aminoacido lisina. Qual è la carica della lisina a pH 11?</h3>
+            <img src="domanda20.jpeg" alt="Molecola chimica" class="question-image">
+            <div class="options">
+            <label><input type="radio" name="q20" value="-1"> -1</label><br>
+            <label><input type="radio" name="q20" value="2"> 2</label><br>
+            <label><input type="radio" name="q20" value="1"> 1</label><br>
+            <label><input type="radio" name="q20" value="-2"> -2</label>
+             </div>
+            <p class="feedback" id="q20-feedback"></p>
+        </div>
+
+        <!-- Domanda 21 -->
+        <div class="question-card" id="q21-container">
+            <h3>21. La formazione di un legame peptidico tra due aminoacidi:</h3>
+            <label><input type="radio" name="q21" value="nessuna delle risposte"> nessuna delle risposte</label><br>
+            <label><input type="radio" name="q21" value="crea caratteri di parziale doppio legame tra tre atomi"> crea caratteri di parziale doppio legame tra tre atomi</label><br>
+            <label><input type="radio" name="q21" value="mantiene le proprietà chimiche del tipico legame ammidico"> mantiene le proprietà chimiche del tipico legame ammidico</label><br>
+            <label><input type="radio" name="q21" value="permette rotazioni senza restrizione su ogni legame chimico"> permette rotazioni senza restrizione su ogni legame chimico</label>
+            <p class="feedback" id="q21-feedback"></p>
+        </div>
+
+        <!-- Domanda 22 -->
+        <div class="question-card" id="q22-container">
+            <h3>22. Quale delle seguenti affermazioni sulla struttura delle proteine è corretta?</h3>
+            <label><input type="radio" name="q22" value="La conformazione alfa-elica è stabilizzata da interazioni idrofobiche"> La conformazione alfa-elica è stabilizzata da interazioni idrofobiche</label><br>
+            <label><input type="radio" name="q22" value="Il folding di un polipeptide in una struttura globulare risulta internamente arricchito in aminoacidi idrofobici"> Il folding di un polipeptide in una struttura globulare risulta internamente arricchito in aminoacidi idrofobici</label><br>
+            <label><input type="radio" name="q22" value="La struttura primaria non influenza la struttura terziaria nativa"> La struttura primaria non influenza la struttura terziaria nativa</label><br>
+            <label><input type="radio" name="q22" value="Le subunità delle proteine con struttura quaternaria si associano tramite legami covalenti"> Le subunità delle proteine con struttura quaternaria si associano tramite legami covalenti</label>
+            <p class="feedback" id="q22-feedback"></p>
+        </div>
+
+        <!-- Domanda 23 -->
+        <div class="question-card" id="q23-container">
+            <h3>23. La sequenza primaria delle proteine è meglio descritta da quale delle seguenti affermazioni:</h3>
+            <label><input type="radio" name="q23" value="sono polimeri formati da legami ammidici tra il carbossile e i gruppi amminici di alfa-aminoacidi"> sono polimeri formati da legami ammidici tra il carbossile e i gruppi amminici di alfa-aminoacidi</label><br>
+            <label><input type="radio" name="q23" value="sono sali di aminoacidi legati tra loro"> sono sali di aminoacidi legati tra loro</label><br>
+            <label><input type="radio" name="q23" value="contengono aminoacidi"> contengono aminoacidi</label><br>
+            <label><input type="radio" name="q23" value="sono polimeri formati da aminoacidi legati tramite legami idrogeno"> sono polimeri formati da aminoacidi legati tramite legami idrogeno</label>
+            <p class="feedback" id="q23-feedback"></p>
+        </div>
+
+        <!-- Domanda 24 -->
+        <div class="question-card" id="q24-container">
+            <h3>24. Qual è la ragione che spiega la geometria planare del legame peptidico delle proteine?</h3>
+            <label><input type="radio" name="q24" value="Il carattere di parziale doppio legame del legame carbonio-azoto"> Il carattere di parziale doppio legame del legame carbonio-azoto</label><br>
+            <label><input type="radio" name="q24" value="Le proteine contengono solo L-aminoacidi"> Le proteine contengono solo L-aminoacidi</label><br>
+            <label><input type="radio" name="q24" value="L'ingombro sterico"> L'ingombro sterico</label><br>
+            <label><input type="radio" name="q24" value="Il legame peptidico è trans piuttosto che cis"> Il legame peptidico è trans piuttosto che cis</label>
+            <p class="feedback" id="q24-feedback"></p>
+        </div>
+
+        <!-- Domanda 25 -->
+        <div class="question-card" id="q25-container">
+            <h3>25. Tutte le seguenti affermazioni sul legame peptidico sono vere eccetto:</h3>
+            <label><input type="radio" name="q25" value="nelle proteine, non tutti i gruppi amminici prendono parte ai legami peptidici"> nelle proteine, non tutti i gruppi amminici prendono parte ai legami peptidici</label><br>
+            <label><input type="radio" name="q25" value="il legame peptidico contiene un gruppo carbonilico"> il legame peptidico contiene un gruppo carbonilico</label><br>
+            <label><input type="radio" name="q25" value="i legami peptidici possono essere formati da tutti gli aminoacidi presenti in natura"> i legami peptidici possono essere formati da tutti gli aminoacidi presenti in natura</label><br>
+            <label><input type="radio" name="q25" value="è possibile la libera rotazione attorno al legame peptidico"> è possibile la libera rotazione attorno al legame peptidico</label>
+            <p class="feedback" id="q25-feedback"></p>
+        </div>
+
+        <!-- Domanda 26 -->
+        <div class="question-card" id="q26-container">
+            <h3>26. Tutte le seguenti affermazioni sulla struttura delle proteine sono vere eccetto una, quale?</h3>
+            <label><input type="radio" name="q26" value="Nell’alfa-elica, le catene laterali degli aminoacidi fuoriescono dalla struttura a spirale della catena polipeptidica"> Nell’alfa-elica, le catene laterali degli aminoacidi fuoriescono dalla struttura a spirale della catena polipeptidica</label><br>
+            <label><input type="radio" name="q26" value="Il legame peptidico è un tipo di legame ammidico"> Il legame peptidico è un tipo di legame ammidico</label><br>
+            <label><input type="radio" name="q26" value="Oltre ai legami peptidici, il legame idrogeno è l’interazione più importante nelle strutture a foglietto beta ripiegato e alfa-elica"> Oltre ai legami peptidici, il legame idrogeno è l’interazione più importante nelle strutture a foglietto beta ripiegato e alfa-elica</label><br>
+            <label><input type="radio" name="q26" value="Lo stato nativo di una proteina è la forma meno stabile in cellula e, di conseguenza, si denatura facilmente"> Lo stato nativo di una proteina è la forma meno stabile in cellula e, di conseguenza, si denatura facilmente</label>
+            <p class="feedback" id="q26-feedback"></p>
+        </div>
+
+        <!-- Domanda 27 -->
+        <div class="question-card" id="q27-container">
+            <h3>27. Quale delle seguenti affermazioni sulle proteine è falsa?</h3>
+            <label><input type="radio" name="q27" value="La struttura ad alfa-elica è stabilizzata da ponti ad idrogeno"> La struttura ad alfa-elica è stabilizzata da ponti ad idrogeno</label><br>
+            <label><input type="radio" name="q27" value="Per denaturazione proteica si intende la perdita della configurazione tridimensionale nativa o biologicamente attiva di una proteina"> Per denaturazione proteica si intende la perdita della configurazione tridimensionale nativa o biologicamente attiva di una proteina</label><br>
+            <label><input type="radio" name="q27" value="Si parla di struttura quaternaria quando la molecola è costituita da più di una catena polipeptidica"> Si parla di struttura quaternaria quando la molecola è costituita da più di una catena polipeptidica</label><br>
+            <label><input type="radio" name="q27" value="Tra le molecole proteiche, le proteine fibrose sono generalmente più solubili di quelle globulari"> Tra le molecole proteiche, le proteine fibrose sono generalmente più solubili di quelle globulari</label>
+            <p class="feedback" id="q27-feedback"></p>
+        </div>
+
+        <!-- Domanda 28 -->
+        <div class="question-card" id="q28-container">
+            <h3>28. Quale interazione può essere coinvolta alla stabilizzazione della struttura terziaria, legando covalentemente diverse catene polipeptidiche?</h3>
+            <label><input type="radio" name="q28" value="Interazione idrofobica"> Interazione idrofobica</label><br>
+            <label><input type="radio" name="q28" value="Interazione elettrostatica"> Interazione elettrostatica</label><br>
+            <label><input type="radio" name="q28" value="Legame peptidico"> Legame peptidico</label><br>
+            <label><input type="radio" name="q28" value="Legame disolfuro"> Legame disolfuro</label>
+            <p class="feedback" id="q28-feedback"></p>
+        </div>
+
+        <!-- Domanda 29 -->
+        <div class="question-card" id="q29-container">
+            <h3>29. Tutte le seguenti affermazioni circa la struttura ad alfa-elica sono vere eccetto una, quale?</h3>
+            <label><input type="radio" name="q29" value="L’alfa elica è stabilizzata principalmente da interazioni idrofobiche"> L’alfa elica è stabilizzata principalmente da interazioni idrofobiche</label><br>
+            <label><input type="radio" name="q29" value="I gruppi R degli aminoacidi in un’alfa-elica sono diretti all’esterno"> I gruppi R degli aminoacidi in un’alfa-elica sono diretti all’esterno</label><br>
+            <label><input type="radio" name="q29" value="L’alfa-elica può essere destrorsa"> L’alfa-elica può essere destrorsa</label><br>
+            <label><input type="radio" name="q29" value="Ci sono 3.6 aminoacidi per giro dell’alfa-elica"> Ci sono 3.6 aminoacidi per giro dell’alfa-elica</label>
+            <p class="feedback" id="q29-feedback"></p>
+        </div>
+
+        <!-- Domanda 30 -->
+        <div class="question-card" id="q30-container">
+            <h3>30. Quale delle seguenti affermazioni relative alle proteine è vera?</h3>
+            <label><input type="radio" name="q30" value="Poiché i protoni che partecipano al legame peptidico non sono dissociabili, le cariche di una catena polipeptidica sono dovute solo al gruppo Nterminale e a quello C-terminale e alle catene laterali dei singoli amminoacidi"> Poiché i protoni che partecipano al legame peptidico non sono dissociabili, le cariche di una catena polipeptidica sono dovute solo al gruppo Nterminale e a quello C-terminale e alle catene laterali dei singoli amminoacidi</label><br>
+            <label><input type="radio" name="q30" value="Per convenzione, la sequenza amminoacidica di una catena polipeptidica è scritta da sinistra a destra, partendo dall’estremità C-terminale verso quella N-terminale"> Per convenzione, la sequenza amminoacidica di una catena polipeptidica è scritta da sinistra a destra, partendo dall’estremità C-terminale verso quella N-terminale</label><br>
+            <label><input type="radio" name="q30" value="Esistono proteine semplici e proteine coniugate. Quest’ultime sono formate dall’associazione di più catene proteiche"> Esistono proteine semplici e proteine coniugate. Quest’ultime sono formate dall’associazione di più catene proteiche</label><br>
+            <label><input type="radio" name="q30" value="I legami peptidici sono molto deboli e dovuti ad interazioni elettrostatiche"> I legami peptidici sono molto deboli e dovuti ad interazioni elettrostatiche</label>
+            <p class="feedback" id="q30-feedback"></p>
+        </div>
+
+        <!-- Domanda 31 -->
+        <div class="question-card" id="q31-container">
+            <h3>31. Quale tra le seguenti affermazioni concernenti l’emoglobina è vera?</h3>
+            <label><input type="radio" name="q31" value="L’emoglobina contiene ferro, che quando si lega all’ossigeno viene ossidato"> L’emoglobina contiene ferro, che quando si lega all’ossigeno viene ossidato</label><br>
+            <label><input type="radio" name="q31" value="L’emoglobina è costituita da quattro catene proteiche: due legano l’ossigeno e due sono regolatorie"> L’emoglobina è costituita da quattro catene proteiche: due legano l’ossigeno e due sono regolatorie</label><br>
+            <label><input type="radio" name="q31" value="L’andamento dell’interazione tra emoglobina e ossigeno è di tipo iperbolico"> L’andamento dell’interazione tra emoglobina e ossigeno è di tipo iperbolico</label><br>
+            <label><input type="radio" name="q31" value="A livello periferico la liberazione dell’ossigeno da parte dell’emoglobina è favorita da un abbassamento del pH"> A livello periferico la liberazione dell’ossigeno da parte dell’emoglobina è favorita da un abbassamento del pH</label>
+            <p class="feedback" id="q31-feedback"></p>
+        </div>
+
+        <!-- Domanda 32 -->
+        <div class="question-card" id="q32-container">
+            <h3>32. Durante un'attività fisica vigorosa, l'effetto Bohr potrebbe aumentare la distribuzione di O2 ai tessuti del corpo. Tutte le seguenti affermazioni sono associate a questo effetto nei tessuti, ECCETTO una, quale?</h3>
+            <label><input type="radio" name="q32" value="La curva di associazione ossigeno-emoglobina si sposta a destra"> La curva di associazione ossigeno-emoglobina si sposta a destra</label><br>
+            <label><input type="radio" name="q32" value="Gli ioni idrogeno vengono rilasciati dall'emoglobina ai tessuti"> Gli ioni idrogeno vengono rilasciati dall'emoglobina ai tessuti</label><br>
+            <label><input type="radio" name="q32" value="Ci sono alterazioni nei ponti salini nelle molecole di emoglobina"> Ci sono alterazioni nei ponti salini nelle molecole di emoglobina</label><br>
+            <label><input type="radio" name="q32" value="E’ stabilizzata la forma tesa dell'emoglobina"> E’ stabilizzata la forma tesa dell'emoglobina</label>
+            <p class="feedback" id="q32-feedback"></p>
+        </div>
+
+        <!-- Domanda 33 -->
+        <div class="question-card" id="q33-container">
+            <h3>33. Quale delle seguenti considerazioni relative alla mioglobina è vera?</h3>
+            <label><input type="radio" name="q33" value="È un dimero"> È un dimero</label><br>
+            <label><input type="radio" name="q33" value="È localizzata a livello epatico"> È localizzata a livello epatico</label><br>
+            <label><input type="radio" name="q33" value="Presenta una maggior affinità per l'ossigeno rispetto all'emoglobina"> Presenta una maggior affinità per l'ossigeno rispetto all'emoglobina</label><br>
+            <label><input type="radio" name="q33" value="La curva di saturazione con l'ossigeno ha andamento sigmoidale"> La curva di saturazione con l'ossigeno ha andamento sigmoidale</label>
+            <p class="feedback" id="q33-feedback"></p>
+        </div>
+
+        <!-- Domanda 34 -->
+        <div class="question-card" id="q34-container">
+            <h3>34. L’affinità dell’emoglobina (Hb) per l’ossigeno (O2) è incrementata dall’aumento della concentrazione di:</h3>
+            <label><input type="radio" name="q34" value="O2"> O2</label><br>
+            <label><input type="radio" name="q34" value="H+"> H+</label><br>
+            <label><input type="radio" name="q34" value="NO"> NO</label><br>
+            <label><input type="radio" name="q34" value="CO2"> CO2</label>
+            <p class="feedback" id="q34-feedback"></p>
+        </div>
+
+        <!-- Domanda 35 -->
+        <div class="question-card" id="q35-container">
+            <h3>35. Le similarità tra emoglobina e mioglobina includono:</h3>
+            <label><input type="radio" name="q35" value="la forma della curva di dissociazione dell'ossigeno"> la forma della curva di dissociazione dell'ossigeno</label><br>
+            <label><input type="radio" name="q35" value="eme come gruppo prostetico"> eme come gruppo prostetico</label><br>
+            <label><input type="radio" name="q35" value="gli effetti del pH sul legame all'ossigeno"> gli effetti del pH sul legame all'ossigeno</label><br>
+            <label><input type="radio" name="q35" value="la conversione dalla conformazione tesa a rilassata all'incremento di pO2"> la conversione dalla conformazione tesa a rilassata all'incremento di pO2</label>
+            <p class="feedback" id="q35-feedback"></p>
+        </div>
+
+        <!-- Domanda 36 -->
+        <div class="question-card" id="q36-container">
+            <h3>36. Nella globina, il residuo prossimale di istidina partecipa:</h3>
+            <label><input type="radio" name="q36" value="al legame di un protone con un effettore allosterico"> al legame di un protone con un effettore allosterico</label><br>
+            <label><input type="radio" name="q36" value="al legame di coordinazione del componente ferro dell'eme"> al legame di coordinazione del componente ferro dell'eme</label><br>
+            <label><input type="radio" name="q36" value="nessuna delle opzioni"> nessuna delle opzioni</label><br>
+            <label><input type="radio" name="q36" value="alla discriminazione nel legame tra O2 e CO"> alla discriminazione nel legame tra O2 e CO</label>
+            <p class="feedback" id="q36-feedback"></p>
+        </div>
+
+        <!-- Domanda 37 -->
+        <div class="question-card" id="q37-container">
+            <h3>37. Quale delle seguenti affermazioni relative alla mioglobina è vera?</h3>
+            <label><input type="radio" name="q37" value="trasporta ossigeno nel sangue"> trasporta ossigeno nel sangue</label><br>
+            <label><input type="radio" name="q37" value="contiene 4 catene globiniche diverse da quelle dell'emoglobina"> contiene 4 catene globiniche diverse da quelle dell'emoglobina</label><br>
+            <label><input type="radio" name="q37" value="contiene 2 catene alfa e 2 catene beta"> contiene 2 catene alfa e 2 catene beta</label><br>
+            <label><input type="radio" name="q37" value="non possiede struttura quaternaria ma struttura terziaria"> non possiede struttura quaternaria ma struttura terziaria</label>
+            <p class="feedback" id="q37-feedback"></p>
+        </div>
+
+        <!-- Domanda 38 -->
+        <div class="question-card" id="q38-container">
+            <h3>38. Il grafico mostra le curve di saturazione di due proteine che legano l’ossigeno, l’emoglobina adulta ed emoglobina fetale. Quale curva descrive il comportamento dell’emoglobina fetale?</h3>
+            <img src="domanda38.png" alt="Molecola chimica" class="question-image">
+            <div class="options">
+            <label><input type="radio" name="q38" value="Curva 2, perché indica una minore affinità per l’ossigeno"> Curva 2, perché indica una minore affinità per l’ossigeno</label><br>
+            <label><input type="radio" name="q38" value="Curva 2, perché indica una maggiore affinità per l’ossigeno"> Curva 2, perché indica una maggiore affinità per l’ossigeno</label><br>
+            <label><input type="radio" name="q38" value="Curva 1, perché indica una maggiore affinità per l’ossigeno"> Curva 1, perché indica una maggiore affinità per l’ossigeno</label><br>
+            <label><input type="radio" name="q38" value="Curva 1, perché indica una minore affinità per l’ossigeno"> Curva 1, perché indica una minore affinità per l’ossigeno</label>
+            </div>
+            <p class="feedback" id="q38-feedback"></p>
+        </div>
+
+        <!-- Domanda 39 -->
+        <div class="question-card" id="q39-container">
+            <h3>39. La mioglobina è:</h3>
+            <label><input type="radio" name="q39" value="Un monomero"> Un monomero</label><br>
+            <label><input type="radio" name="q39" value="Una proteina allosterica"> Una proteina allosterica</label><br>
+            <label><input type="radio" name="q39" value="Formata da 4 α eliche nella sua struttura secondaria"> Formata da 4 α eliche nella sua struttura secondaria</label><br>
+            <label><input type="radio" name="q39" value="Un tetramero formato da due subunità a e 2 subunità β"> Un tetramero formato da due subunità a e 2 subunità β</label>
+            <p class="feedback" id="q39-feedback"></p>
+        </div>
+
+        <!-- Domanda 40 -->
+        <div class="question-card" id="q40-container">
+            <h3>40. L'emoglobina:</h3>
+            <label><input type="radio" name="q40" value="Racchiude il gruppo eme, assieme allo ione Fe2+, che permettono la funzione della proteina"> Racchiude il gruppo eme, assieme allo ione Fe2+, che permettono la funzione della proteina</label><br>
+            <label><input type="radio" name="q40" value="Ha una curva di saturazione iperbolica"> Ha una curva di saturazione iperbolica</label><br>
+            <label><input type="radio" name="q40" value="Lega il 2,3-bisfosfoglicerato che favorisce lo stato R dell’emoglobina"> Lega il 2,3-bisfosfoglicerato che favorisce lo stato R dell’emoglobina</label><br>
+            <label><input type="radio" name="q40" value="Lega l'O2 attraverso i suoi amminoacidi"> Lega l'O2 attraverso i suoi amminoacidi</label>
+            <p class="feedback" id="q40-feedback"></p>
+        </div>
+
+        <!-- Domanda 41 -->
+        <div class="question-card" id="q41-container">
+            <h3>41. Quale affermazione sugli enzimi è vera?</h3>
+            <label><input type="radio" name="q41" value="Un alto valore di Km indica un'alta affinità per il substrato"> Un alto valore di Km indica un'alta affinità per il substrato</label><br>
+            <label><input type="radio" name="q41" value="Gli enzimi durante la catalisi si modificano in modo irreversibile"> Gli enzimi durante la catalisi si modificano in modo irreversibile</label><br>
+            <label><input type="radio" name="q41" value="Gli enzimi non possono essere regolati"> Gli enzimi non possono essere regolati</label><br>
+            <label><input type="radio" name="q41" value="Gli enzimi sono catalizzatori biologici che accelerano le reazioni biochimiche abbassando l'energia di attivazione"> Gli enzimi sono catalizzatori biologici che accelerano le reazioni biochimiche abbassando l'energia di attivazione</label>
+            <p class="feedback" id="q41-feedback"></p>
+        </div>
+
+        <!-- Domanda 42 -->
+        <div class="question-card" id="q42-container">
+            <h3>42. Quale dei seguenti metodi è usato per regolare l’attività enzimatica:</h3>
+            <label><input type="radio" name="q42" value="Modificazione covalente"> Modificazione covalente</label><br>
+            <label><input type="radio" name="q42" value="Tutti i metodi sono usati per regolare l’attività di un enzima"> Tutti i metodi sono usati per regolare l’attività di un enzima</label><br>
+            <label><input type="radio" name="q42" value="Sintesi e degradazione dell’enzima"> Sintesi e degradazione dell’enzima</label><br>
+            <label><input type="radio" name="q42" value="Regolazione allosterica"> Regolazione allosterica</label>
+            <p class="feedback" id="q42-feedback"></p>
+        </div>
+
+        <!-- Domanda 43 -->
+        <div class="question-card" id="q43-container">
+            <h3>43. Nel caso in cui un enzima abbia una relazione sigmoidale tra la velocità e la concentrazione del substrato, si può concludere che:</h3>
+            <label><input type="radio" name="q43" value="L’enzima mostra cooperatività, in termini di legame, col substrato"> L’enzima mostra cooperatività, in termini di legame, col substrato</label><br>
+            <label><input type="radio" name="q43" value="Il legame di una molecola di substrato ostacola il legame delle altre"> Il legame di una molecola di substrato ostacola il legame delle altre</label><br>
+            <label><input type="radio" name="q43" value="L’enzima contiene solo un sito di legame per il substrato"> L’enzima contiene solo un sito di legame per il substrato</label><br>
+            <label><input type="radio" name="q43" value="L’enzima contiene almeno quattro subunità"> L’enzima contiene almeno quattro subunità</label>
+            <p class="feedback" id="q43-feedback"></p>
+        </div>
+
+        <!-- Domanda 44 -->
+        <div class="question-card" id="q44-container">
+            <h3>44. La Km in una reazione enzimatica indica:</h3>
+            <label><input type="radio" name="q44" value="La concentrazione del substrato alla quale l’enzima è saturato"> La concentrazione del substrato alla quale l’enzima è saturato</label><br>
+            <label><input type="radio" name="q44" value="Il numero di molecole di substrato trasformate per unità di tempo"> Il numero di molecole di substrato trasformate per unità di tempo</label><br>
+            <label><input type="radio" name="q44" value="La concentrazione del substrato alla quale la reazione decorre a ½ Vmax"> La concentrazione del substrato alla quale la reazione decorre a ½ Vmax</label><br>
+            <label><input type="radio" name="q44" value="La concentrazione del substrato alla quale la reazione decorre a Vmax"> La concentrazione del substrato alla quale la reazione decorre a Vmax</label>
+            <p class="feedback" id="q44-feedback"></p>
+        </div>
+
+        <!-- Domanda 45 -->
+        <div class="question-card" id="q45-container">
+            <h3>45. Per quale motivo la curva in un grafico di Michelis-Menten raggiunge il plateau?</h3>
+            <label><input type="radio" name="q45" value="Perché è presente un inibitore non competitivo"> Perché è presente un inibitore non competitivo</label><br>
+            <label><input type="radio" name="q45" value="Perché tutto il substrato è stato convertito in prodotto"> Perché tutto il substrato è stato convertito in prodotto</label><br>
+            <label><input type="radio" name="q45" value="Perché è presente un inibitore competitivo"> Perché è presente un inibitore competitivo</label><br>
+            <label><input type="radio" name="q45" value="Perché l’enzima si satura"> Perché l’enzima si satura</label>
+            <p class="feedback" id="q45-feedback"></p>
+        </div>
+
+        <!-- Domanda 46 -->
+        <div class="question-card" id="q46-container">
+            <h3>46. Quale delle seguenti affermazioni riguarda gli enzimi allosterici?</h3>
+            <label><input type="radio" name="q46" value="Gli enzimi allosterici seguono la cinetica di Michelis-Menten"> Gli enzimi allosterici seguono la cinetica di Michelis-Menten</label><br>
+            <label><input type="radio" name="q46" value="Gli enzimi allosterici non hanno la Vmax"> Gli enzimi allosterici non hanno la Vmax</label><br>
+            <label><input type="radio" name="q46" value="Il legame ad un sito modifica l’affinità di legame in altri siti"> Il legame ad un sito modifica l’affinità di legame in altri siti</label><br>
+            <label><input type="radio" name="q46" value="L’andamento della curva è lineare per gli enzimi allosterici"> L’andamento della curva è lineare per gli enzimi allosterici</label>
+            <p class="feedback" id="q46-feedback"></p>
+        </div>
+
+        <!-- Domanda 47 -->
+        <div class="question-card" id="q47-container">
+            <h3>47. Quale delle seguenti affermazioni è vera?</h3>
+            <label><input type="radio" name="q47" value="Il glucosio è un chetoesoso"> Il glucosio è un chetoesoso</label><br>
+            <label><input type="radio" name="q47" value="Il glucosio è un disaccaride"> Il glucosio è un disaccaride</label><br>
+            <label><input type="radio" name="q47" value="Il glucosio è un aldoesoso"> Il glucosio è un aldoesoso</label><br>
+            <label><input type="radio" name="q47" value="Il glucosio è un aldopentoso"> Il glucosio è un aldopentoso</label>
+            <p class="feedback" id="q47-feedback"></p>
+        </div>
+
+        <!-- Domanda 48 -->
+        <div class="question-card" id="q48-container">
+            <h3>48. Di che tipo sono i legami tra le unità di glucosio nella cellulosa?</h3>
+            <label><input type="radio" name="q48" value="β-1,4"> β-1,4</label><br>
+            <label><input type="radio" name="q48" value="α-1,4"> α-1,4</label><br>
+            <label><input type="radio" name="q48" value="α-1,6"> α-1,6</label><br>
+            <label><input type="radio" name="q48" value="α-1,2"> α-1,2</label>
+            <p class="feedback" id="q48-feedback"></p>
+        </div>
+
+
+        <!-- Domanda 49 -->
+        <div class="question-card" id="q49-container">
+            <h3>49. Un aldopentoso ______________.</h3>
+            <label><input type="radio" name="q49" value="È un monosaccaride e contiene il gruppo RCO"> È un monosaccaride e contiene il gruppo RCO</label><br>
+            <label><input type="radio" name="q49" value="È un disaccaride e contiene il gruppo CHO"> È un disaccaride e contiene il gruppo CHO</label><br>
+            <label><input type="radio" name="q49" value="È un’oligosaccaride e contiene il gruppo RCO"> È un’oligosaccaride e contiene il gruppo RCO</label><br>
+            <label><input type="radio" name="q49" value="È un monosaccaride e contiene il gruppo CHO"> È un monosaccaride e contiene il gruppo CHO</label>
+            <p class="feedback" id="q49-feedback"></p>
+        </div>
+
+        <!-- Domanda 50 -->
+        <div class="question-card" id="q50-container">
+            <h3>50. Quale delle seguenti affermazioni relative al glicogeno è VERA?</h3>
+            <label><input type="radio" name="q50" value="Contiene residui di fruttosio"> Contiene residui di fruttosio</label><br>
+            <label><input type="radio" name="q50" value="È un polimero del glucosio privo di ramificazioni"> È un polimero del glucosio privo di ramificazioni</label><br>
+            <label><input type="radio" name="q50" value="È un polimero del glucosio contenente legami alfa-glicosidici"> È un polimero del glucosio contenente legami alfa-glicosidici</label><br>
+            <label><input type="radio" name="q50" value="È particolarmente abbondante nel muscolo dove funge da riserva energetica per l'intero organismo"> È particolarmente abbondante nel muscolo dove funge da riserva energetica per l'intero organismo</label>
+            <p class="feedback" id="q50-feedback"></p>
+        </div>
+
+        <!-- Domanda 51 -->
+        <div class="question-card" id="q51-container">
+            <h3>51. Qual è la formula generale di un carboidrato?</h3>
+            <label><input type="radio" name="q51" value="Cn(H2O)n"> Cn(H2O)n</label><br>
+            <label><input type="radio" name="q51" value="Cn(HO)n"> Cn(HO)n</label><br>
+            <label><input type="radio" name="q51" value="CnH2n+2"> CnH2n+2</label><br>
+            <label><input type="radio" name="q51" value="CnH2n"> CnH2n</label>
+            <p class="feedback" id="q51-feedback"></p>
+        </div>
+
+        <!-- Domanda 52 -->
+        <div class="question-card" id="q52-container">
+            <h3>52. Il legame N-glicosidico è molto importante in quanto alla base di quale biomolecole?</h3>
+            <label><input type="radio" name="q52" value="Proteine"> Proteine</label><br>
+            <label><input type="radio" name="q52" value="Lipidi"> Lipidi</label><br>
+            <label><input type="radio" name="q52" value="DNA e RNA"> DNA e RNA</label><br>
+            <label><input type="radio" name="q52" value="Steroidi"> Steroidi</label>
+            <p class="feedback" id="q52-feedback"></p>
+        </div>
+
+        <!-- Domanda 53 -->
+        <div class="question-card" id="q53-container">
+            <h3>53. Quale delle seguenti affermazioni sul glucosio è falsa?</h3>
+            <label><input type="radio" name="q53" value="Contiene 6 atomi di carbonio"> Contiene 6 atomi di carbonio</label><br>
+            <label><input type="radio" name="q53" value="È un aldoso"> È un aldoso</label><br>
+            <label><input type="radio" name="q53" value="È un monosaccaride"> È un monosaccaride</label><br>
+            <label><input type="radio" name="q53" value="Nella forma lineare possiede 3 carboni asimmetrici"> Nella forma lineare possiede 3 carboni asimmetrici</label>
+            <p class="feedback" id="q53-feedback"></p>
+        </div>
+
+        <!-- Domanda 54 -->
+        <div class="question-card" id="q54-container">
+            <h3>54. Il glicogeno nel muscolo:</h3>
+            <label><input type="radio" name="q54" value="serve soprattutto come tampone dei livelli ematici di glucosio"> serve soprattutto come tampone dei livelli ematici di glucosio</label><br>
+            <label><input type="radio" name="q54" value="serve come fonte di glucosio-6-fosfato che viene di seguito fosforilato dalla glucosio-6-fosfatasi e trasportato fuori dalla cellula"> serve come fonte di glucosio-6-fosfato che viene di seguito fosforilato dalla glucosio-6-fosfatasi e trasportato fuori dalla cellula</label><br>
+            <label><input type="radio" name="q54" value="serve come fonte di combustibile per la sintesi di ATP in questo tessuto"> serve come fonte di combustibile per la sintesi di ATP in questo tessuto</label><br>
+            <label><input type="radio" name="q54" value="è rapidamente esaurito durante il digiuno"> è rapidamente esaurito durante il digiuno</label>
+            <p class="feedback" id="q54-feedback"></p>
+        </div>
+
+        <!-- Domanda 55 -->
+        <div class="question-card" id="q55-container">
+            <h3>55. Quale fra le seguenti affermazioni descrive correttamente la differenza tra amilosio e amilopectina?</h3>
+            <label><input type="radio" name="q55" value="L’amilosio è un polisaccaride a catena lineare, mentre l’amilopectina è un polisaccaride ramificato"> L’amilosio è un polisaccaride a catena lineare, mentre l’amilopectina è un polisaccaride ramificato</label><br>
+            <label><input type="radio" name="q55" value="L’amilosio contiene legami α-1,6-glicosidici, mentre l’amilopectina non li contiene"> L’amilosio contiene legami α-1,6-glicosidici, mentre l’amilopectina non li contiene</label><br>
+            <label><input type="radio" name="q55" value="L’amilosio è una fra le molecole più grandi ritrovate in natura, mentre l’amilopectina è una fra le molecole più piccole ritrovate in natura"> L’amilosio è una fra le molecole più grandi ritrovate in natura, mentre l’amilopectina è una fra le molecole più piccole ritrovate in natura</label><br>
+            <label><input type="radio" name="q55" value="L’amilosio è composto da migliaia di unità di D-glucosio, mentre l’amilopectina è composta da migliaia di unità di D-galattosio"> L’amilosio è composto da migliaia di unità di D-glucosio, mentre l’amilopectina è composta da migliaia di unità di D-galattosio</label>
+            <p class="feedback" id="q55-feedback"></p>
+        </div>
+
+        <!-- Domanda 56 -->
+        <div class="question-card" id="q56-container">
+            <h3>56. Quali tra le seguenti molecole sono disaccaridi?</h3>
+            <label><input type="radio" name="q56" value="I, II, III"> I, II, III</label><br>
+            <label><input type="radio" name="q56" value="I, III, IV, V"> I, III, IV, V</label><br>
+            <label><input type="radio" name="q56" value="I, III, IV"> I, III, IV</label><br>
+            <label><input type="radio" name="q56" value="III, IV, V"> III, IV, V</label>
+            <p class="feedback" id="q56-feedback"></p>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">Invia</button>
+        <button type="button" id="resetButton" onclick="resetQuiz()" style="display: none;">Ripeti Quiz</button>
+    </form>
+    
+
+    <p id="result"></p>
+    
+    <script src="script.js"></script>
 </body>
 </html>
