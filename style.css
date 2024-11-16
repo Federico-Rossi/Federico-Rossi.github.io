@@ -2,7 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-color: #f4f4f9;
+    background-color: #2b3a4b;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,11 +13,11 @@ body {
 /* Titolo principale */
 h1 {
     text-align: center;
-    color: black;
-    font-size: 2.5em;
+    color: #ffffff; /* Testo bianco puro per massima leggibilità */
+    font-size: 3em;
     font-weight: bold;
     margin: 40px 0 20px 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Leggera ombra per migliorare la visibilità */
 }
 
 /* Contenitore delle domande: usare flex per disporre le card */
@@ -50,7 +50,7 @@ h1 {
 /* Titoli delle domande */
 .question-card h3 {
     margin: 0 0 20px 0;
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: #333;
 }
 
@@ -174,7 +174,7 @@ img {
 /* Media Queries per dispositivi mobili */
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: 2em;
+        font-size: 2.2em;
         margin: 20px 0;
     }
 
@@ -195,14 +195,14 @@ img {
     }
 
     .question-card h3 {
-        font-size: 1.1em;
+        font-size: 1.4em;
     }
 }
 
 /* Media Queries per schermi molto piccoli */
 @media screen and (max-width: 480px) {
     h1 {
-        font-size: 1.5em;
+        font-size: 2.2em;
         margin: 10px 0;
     }
 
@@ -222,6 +222,38 @@ img {
     }
 
     .question-card h3 {
-        font-size: 1em;
+        font-size: 1.4em;
     }
+}
+
+
+#scrollButton {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    background-color: #007bff; /* Blu brillante per un look moderno */
+    color: white;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 50%; /* Pulsante circolare */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ombra per il contrasto */
+    cursor: pointer;
+    display: none; /* Nascondilo inizialmente */
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover: blu più chiaro */
+#scrollButton:hover {
+    background-color: #0056b3; /* Blu scuro per l'effetto hover */
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Attivo: blu ancora più scuro per l'effetto click */
+#scrollButton:active {
+    background-color: #004085; /* Blu molto scuro per il click */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
