@@ -6,6 +6,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
+    box-sizing: border-box; /* Per includere il padding e il margine nella larghezza totale */
 }
 
 /* Titolo principale */
@@ -14,38 +16,48 @@ h1 {
     color: black;
     font-size: 2.5em;
     font-weight: bold;
-    margin: 40px 0 20px 0; /* Margine superiore e inferiore per distanziarlo dal contenuto */
+    margin: 40px 0 20px 0;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenitore delle domande: usare flex per disporre le card */
+#quizForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 750px; /* Limita la larghezza massima */
 }
 
 /* Card delle domande */
 .question-card {
     width: 100%;
-    max-width: 750px;
     background-color: white;
     padding: 20px;
-    margin: 10px 20px;
+    margin: 10px 0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 1px solid #e0e0e0;
     transition: box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
+/* Hover sulle card */
 .question-card:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Stile per i titoli delle domande */
+/* Titoli delle domande */
 .question-card h3 {
     margin: 0 0 20px 0;
     font-size: 1.2em;
     color: #333;
 }
 
-/* Stile per il pulsante radio (cerchio) */
+/* Pulsanti radio (cerchio) */
 .question-card label input[type="radio"] {
-    margin-right: 10px; /* Spazio tra il cerchio e il testo */
-    transform: translateY(-1px); /* Allinea verticalmente il cerchio con il testo */
+    margin-right: 10px;
+    transform: translateY(-1px);
 }
 
 /* Hover sulle etichette */
@@ -59,18 +71,17 @@ h1 {
     position: relative;
     cursor: pointer;
     transition: padding-left 0.3s ease;
-    border-radius: 10px; /* Arrotonda i bordi di base */
-    overflow: hidden; /* Nasconde qualsiasi parte del contenuto che fuoriesce durante l'animazione */
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-/* Hover sulle etichette */
 .question-card label:hover {
-    background-color: rgba(0, 0, 0, 0.05); /* Sfondo morbido */
-    padding-left: 15px; /* Aumenta leggermente il padding a sinistra per effetto hover */
+    background-color: rgba(0, 0, 0, 0.05);
+    padding-left: 15px;
     transition: background-color 0.3s ease, padding-left 0.3s ease;
 }
 
-/* Stile per il feedback delle risposte */
+/* Feedback */
 .feedback {
     font-weight: bold;
     margin-top: 10px;
@@ -84,22 +95,30 @@ h1 {
     color: red;
 }
 
-/* Stile per i bottoni */
+/* Contenitore per i bottoni */
+.buttons-container {
+    display: flex;                /* Attiva Flexbox */
+    justify-content: center;      /* Centra i bottoni orizzontalmente */
+    gap: 20px;                    /* Distanza tra i bottoni */
+    margin-top: 20px;             /* Margine superiore per separare i bottoni dal contenuto */
+}
+
+/* Aggiungi un po' di margine per i bottoni (opzionale) */
 button {
-    padding: 15px 30px; /* Aumentato per rendere il bottone più grande */
-    font-size: 1.2em; /* Aumentato per rendere il testo più leggibile */
+    padding: 15px 30px;
+    font-size: 1.2em;
     background-color: #4CAF50;
     color: white;
     border: none;
     cursor: pointer;
-    margin: 20px 20px;
-    border-radius: 10px; /* Bordi arrotondati per un aspetto più moderno */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Aggiungi transizione per il movimento */
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/* Modifica colore del pulsante al passaggio del mouse */
 button:hover {
     background-color: #45a049;
-    transform: translateY(-3px); /* Effetto di sollevamento al passaggio del mouse */
+    transform: translateY(-3px);
 }
 
 #resetButton {
@@ -108,40 +127,101 @@ button:hover {
 
 #resetButton:hover {
     background-color: #e53935;
-    transform: translateY(-3px); /* Effetto di sollevamento al passaggio del mouse */
+    transform: translateY(-3px);
 }
 
-/* Stile per il risultato */
+
+/* Risultato */
 #result {
     text-align: center;
-    font-size: 1.5em; /* Aumentato il font per renderlo più visibile */
-    font-weight: bold; /* Rende il testo in grassetto */
+    font-size: 1.5em;
+    font-weight: bold;
     margin-top: 20px;
     padding: 20px;
     background-color: #fff;
-    border-radius: 10px; /* Bordi arrotondati per un look più morbido */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge una leggera ombra per un effetto di profondità */
-    color: #333; /* Colore di base per il testo */
-    transition: all 0.3s ease; /* Aggiungi una transizione per gli effetti */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    transition: all 0.3s ease;
 }
 
-/* Colore per il risultato positivo */
 #result.correct {
-    color: #4CAF50; /* Verde per risultati positivi */
+    color: #4CAF50;
 }
 
-/* Colore per il risultato negativo */
 #result.incorrect {
-    color: #f44336; /* Rosso per risultati negativi */
+    color: #f44336;
 }
 
 /* Animazione di apparizione */
 #result {
     opacity: 0;
-    transform: translateY(20px); /* L'effetto di partenza è di 20px in basso */
+    transform: translateY(20px);
 }
 
 #result.show {
     opacity: 1;
-    transform: translateY(0); /* L'elemento si sposta in alto e diventa visibile */
+    transform: translateY(0);
+}
+
+img {
+    max-width: 100%;   /* Impedisce che l'immagine superi la larghezza del contenitore */
+    height: auto;      /* Mantiene le proporzioni dell'immagine */
+    display: block;    /* Rimuove eventuali spazi sotto l'immagine */
+    margin: 0 auto;    /* Centra l'immagine orizzontalmente */
+}
+
+/* Media Queries per dispositivi mobili */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+        margin: 20px 0;
+    }
+
+    /* Le card si adattano completamente alla larghezza dello schermo */
+    .question-card {
+        width: 100%; /* Le card saranno larghe al 100% */
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .feedback {
+        font-size: 1em;
+    }
+
+    .question-card h3 {
+        font-size: 1.1em;
+    }
+}
+
+/* Media Queries per schermi molto piccoli */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+        margin: 10px 0;
+    }
+
+    .question-card {
+        width: 100%; /* Rende la larghezza delle card piena per schermi molto piccoli */
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .feedback {
+        font-size: 0.9em;
+    }
+
+    .question-card h3 {
+        font-size: 1em;
+    }
 }
