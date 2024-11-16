@@ -1,0 +1,227 @@
+/* Stile del corpo della pagina */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box; /* Per includere il padding e il margine nella larghezza totale */
+}
+
+/* Titolo principale */
+h1 {
+    text-align: center;
+    color: black;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 40px 0 20px 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenitore delle domande: usare flex per disporre le card */
+#quizForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 750px; /* Limita la larghezza massima */
+}
+
+/* Card delle domande */
+.question-card {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    transition: box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Hover sulle card */
+.question-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Titoli delle domande */
+.question-card h3 {
+    margin: 0 0 20px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Pulsanti radio (cerchio) */
+.question-card label input[type="radio"] {
+    margin-right: 10px;
+    transform: translateY(-1px);
+}
+
+/* Hover sulle etichette */
+.question-card label {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: padding-left 0.3s ease;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.question-card label:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    padding-left: 15px;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+/* Feedback */
+.feedback {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+/* Contenitore per i bottoni */
+.buttons-container {
+    display: flex;                /* Attiva Flexbox */
+    justify-content: center;      /* Centra i bottoni orizzontalmente */
+    gap: 20px;                    /* Distanza tra i bottoni */
+    margin-top: 20px;             /* Margine superiore per separare i bottoni dal contenuto */
+}
+
+/* Aggiungi un po' di margine per i bottoni (opzionale) */
+button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Modifica colore del pulsante al passaggio del mouse */
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+}
+
+#resetButton {
+    background-color: #f44336;
+}
+
+#resetButton:hover {
+    background-color: #e53935;
+    transform: translateY(-3px);
+}
+
+
+/* Risultato */
+#result {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+#result.correct {
+    color: #4CAF50;
+}
+
+#result.incorrect {
+    color: #f44336;
+}
+
+/* Animazione di apparizione */
+#result {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+#result.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+img {
+    max-width: 100%;   /* Impedisce che l'immagine superi la larghezza del contenitore */
+    height: auto;      /* Mantiene le proporzioni dell'immagine */
+    display: block;    /* Rimuove eventuali spazi sotto l'immagine */
+    margin: 0 auto;    /* Centra l'immagine orizzontalmente */
+}
+
+/* Media Queries per dispositivi mobili */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+        margin: 20px 0;
+    }
+
+    /* Le card si adattano completamente alla larghezza dello schermo */
+    .question-card {
+        width: 100%; /* Le card saranno larghe al 100% */
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    .feedback {
+        font-size: 1em;
+    }
+
+    .question-card h3 {
+        font-size: 1.1em;
+    }
+}
+
+/* Media Queries per schermi molto piccoli */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+        margin: 10px 0;
+    }
+
+    .question-card {
+        width: 100%; /* Rende la larghezza delle card piena per schermi molto piccoli */
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .feedback {
+        font-size: 0.9em;
+    }
+
+    .question-card h3 {
+        font-size: 1em;
+    }
+}
