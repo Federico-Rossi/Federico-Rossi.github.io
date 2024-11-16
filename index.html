@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domande Biochimica</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -591,8 +591,11 @@
             <p class="feedback" id="q56-feedback"></p>
         </div>
 
-        <button type="button" onclick="checkAnswers()">Invia</button>
-        <button type="button" id="resetButton" onclick="resetQuiz()" style="display: none;">Ripeti Quiz</button>
+        <div class="buttons-container">
+            <button type="button" onclick="checkAnswers()">Invia</button>
+            <button type="button" id="resetButton" onclick="resetQuiz()" style="display: none;">Ripeti Quiz</button>
+        </div>
+        
     </form>
     
 
