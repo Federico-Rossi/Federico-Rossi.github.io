@@ -1,72 +1,147 @@
+/* Stile del corpo della pagina */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
     margin: 0;
-    padding: 0;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-header {
-    background-color: #007acc;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
+/* Titolo principale */
 h1 {
-    margin: 0;
-    font-size: 36px;
-}
-
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    font-size: 24px;
-}
-
-p {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* Stile per l'header moderno */
-.modern-header {
-    background-color: #007acc;
-    color: #fff;
-    padding: 20px 0;
     text-align: center;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    color: black;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 40px 0 20px 0; /* Margine superiore e inferiore per distanziarlo dal contenuto */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.modern-header h1 {
-    font-size: 36px;
-    margin: 0;
-    text-transform: uppercase;
-}
-
-/* Stile per il testo */
-.container h2,
-.container p {
-    color: #333;
-    font-size: 18px;
-    line-height: 1.5;
-}
-
-/* Altri stili rimangono invariati */
-.container {
-    /* Resto del tuo stile per .container */
-}
-
-/* Stile per il footer */
-footer {
-	
-    margin: 0px auto 0px auto ;
-    background-color: #fff;
+/* Card delle domande */
+.question-card {
+    width: 100%;
+    max-width: 750px;
+    background-color: white;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+    transition: box-shadow 0.3s ease;
+}
+
+.question-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Stile per i titoli delle domande */
+.question-card h3 {
+    margin: 0 0 20px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Stile per il pulsante radio (cerchio) */
+.question-card label input[type="radio"] {
+    margin-right: 10px; /* Spazio tra il cerchio e il testo */
+    transform: translateY(-1px); /* Allinea verticalmente il cerchio con il testo */
+}
+
+/* Hover sulle etichette */
+.question-card label {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: padding-left 0.3s ease;
+    border-radius: 10px; /* Arrotonda i bordi di base */
+    overflow: hidden; /* Nasconde qualsiasi parte del contenuto che fuoriesce durante l'animazione */
+}
+
+/* Hover sulle etichette */
+.question-card label:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Sfondo morbido */
+    padding-left: 15px; /* Aumenta leggermente il padding a sinistra per effetto hover */
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+/* Stile per il feedback delle risposte */
+.feedback {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+/* Stile per i bottoni */
+button {
+    padding: 15px 30px; /* Aumentato per rendere il bottone più grande */
+    font-size: 1.2em; /* Aumentato per rendere il testo più leggibile */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 20px 20px;
+    border-radius: 10px; /* Bordi arrotondati per un aspetto più moderno */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Aggiungi transizione per il movimento */
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px); /* Effetto di sollevamento al passaggio del mouse */
+}
+
+#resetButton {
+    background-color: #f44336;
+}
+
+#resetButton:hover {
+    background-color: #e53935;
+    transform: translateY(-3px); /* Effetto di sollevamento al passaggio del mouse */
+}
+
+/* Stile per il risultato */
+#result {
+    text-align: center;
+    font-size: 1.5em; /* Aumentato il font per renderlo più visibile */
+    font-weight: bold; /* Rende il testo in grassetto */
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px; /* Bordi arrotondati per un look più morbido */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiunge una leggera ombra per un effetto di profondità */
+    color: #333; /* Colore di base per il testo */
+    transition: all 0.3s ease; /* Aggiungi una transizione per gli effetti */
+}
+
+/* Colore per il risultato positivo */
+#result.correct {
+    color: #4CAF50; /* Verde per risultati positivi */
+}
+
+/* Colore per il risultato negativo */
+#result.incorrect {
+    color: #f44336; /* Rosso per risultati negativi */
+}
+
+/* Animazione di apparizione */
+#result {
+    opacity: 0;
+    transform: translateY(20px); /* L'effetto di partenza è di 20px in basso */
+}
+
+#result.show {
+    opacity: 1;
+    transform: translateY(0); /* L'elemento si sposta in alto e diventa visibile */
 }
