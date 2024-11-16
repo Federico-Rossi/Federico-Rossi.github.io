@@ -119,3 +119,26 @@ function resetQuiz() {
     window.scrollTo(0, 0);
 }
 
+// Mostra o nasconde il pulsante in base allo scroll
+window.onscroll = function() {
+    const scrollButton = document.getElementById("scrollButton");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        scrollButton.style.display = "flex";
+        scrollButton.innerHTML = "&#9650;"; // Freccia su (Unicode: U+9650)
+    } else {
+        scrollButton.style.display = "flex";
+        scrollButton.innerHTML = "&#9660;"; // Freccia giù (Unicode: U+9660)
+    }
+};
+
+// Funzione per scorrere su o giù
+function scrollPage() {
+    const currentScroll = window.scrollY || document.documentElement.scrollTop;
+    if (currentScroll > 100) {
+        // Se si è scesi, torna su
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+        // Se si è in cima, scendi in fondo
+        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+}
