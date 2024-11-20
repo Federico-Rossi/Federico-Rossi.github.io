@@ -1,23 +1,30 @@
 /* Stile del corpo della pagina */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
-    background-color: #bcbcbc;
+    background: linear-gradient(180deg, #eef7f7, #dce6e6); /* Sfondo morbido con una sfumatura */
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    box-sizing: border-box; /* Per includere il padding e il margine nella larghezza totale */
+    box-sizing: border-box;
 }
 
 /* Titolo principale */
 h1 {
     text-align: center;
-    color: #ffffff; /* Testo bianco puro per massima leggibilità */
+    color: #3e6e47; /* Verde scuro e naturale, elegante e moderno */
     font-size: 3em;
-    font-weight: bold;
-    margin: 40px 0 20px 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Leggera ombra per migliorare la visibilità */
+    font-weight: 700; /* Più marcato e deciso */
+    margin: 30px 0;
+    padding: 15px 30px;
+    background-color: #ffffff; /* Sfondo bianco pulito, per contrastare bene con il verde */
+    border: 2px solid #3e6e47; /* Bordo verde scuro per un effetto moderno */
+    border-radius: 10px; /* Angoli leggermente arrotondati per un look più morbido */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra leggera per dare profondità */
+    text-transform: uppercase; /* Tutto maiuscolo per un effetto più deciso */
+    letter-spacing: 2px; /* Maggiore spaziatura per un aspetto moderno */
+    transition: all 0.3s ease; /* Transizione morbida per interazioni */
 }
 
 /* Contenitore delle domande: usare flex per disporre le card */
@@ -32,17 +39,16 @@ h1 {
 /* Card delle domande */
 .question-card {
     width: 100%;
-    background-color: white;
+    background: linear-gradient(135deg, #ffffff, #f0f7f4); /* Sfumatura bianca-verde */
     padding: 20px;
     margin: 10px 0;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e0e0e0;
+    border: 1px solid #cfe8e0;
     transition: box-shadow 0.3s ease;
     box-sizing: border-box;
 }
 
-/* Hover sulle card */
 .question-card:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
@@ -51,16 +57,16 @@ h1 {
 .question-card h3 {
     margin: 0 0 20px 0;
     font-size: 1.4em;
-    color: #333;
+    color: #1a5e20; /* Verde scuro ma diverso dal feedback */
 }
 
-/* Pulsanti radio (cerchio) */
+/* Pulsanti radio */
 .question-card label input[type="radio"] {
     margin-right: 10px;
     transform: translateY(-1px);
 }
 
-/* Hover sulle etichette */
+/* Etichette */
 .question-card label {
     display: flex;
     align-items: center;
@@ -70,15 +76,14 @@ h1 {
     padding-bottom: 10px;
     position: relative;
     cursor: pointer;
-    transition: padding-left 0.3s ease;
+    transition: padding-left 0.3s ease, background-color 0.3s ease;
     border-radius: 10px;
     overflow: hidden;
 }
 
 .question-card label:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(82, 182, 229, 0.1); /* Blu tenue */
     padding-left: 15px;
-    transition: background-color 0.3s ease, padding-left 0.3s ease;
 }
 
 /* Feedback */
@@ -88,26 +93,20 @@ h1 {
 }
 
 .correct {
-    color: green;
+    color: #4caf50; /* Verde più brillante per differenziarlo */
+    font-size: 1.2em; /* Più grande per risaltare */
 }
 
 .incorrect {
-    color: red;
+    color: #d00000;
+    font-size: 1.2em;
 }
 
-/* Contenitore per i bottoni */
-.buttons-container {
-    display: flex;                /* Attiva Flexbox */
-    justify-content: center;      /* Centra i bottoni orizzontalmente */
-    gap: 20px;                    /* Distanza tra i bottoni */
-    margin-top: 20px;             /* Margine superiore per separare i bottoni dal contenuto */
-}
-
-/* Aggiungi un po' di margine per i bottoni (opzionale) */
+/* Bottoni */
 button {
     padding: 15px 30px;
     font-size: 1.2em;
-    background-color: #4CAF50;
+    background-color: #52b6e5;
     color: white;
     border: none;
     cursor: pointer;
@@ -115,21 +114,18 @@ button {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Modifica colore del pulsante al passaggio del mouse */
 button:hover {
-    background-color: #45a049;
+    background-color: #2b9348;
     transform: translateY(-3px);
 }
 
 #resetButton {
-    background-color: #f44336;
+    background-color: #d00000;
 }
 
 #resetButton:hover {
-    background-color: #e53935;
-    transform: translateY(-3px);
+    background-color: #b50000;
 }
-
 
 /* Risultato */
 #result {
