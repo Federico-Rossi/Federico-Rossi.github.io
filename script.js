@@ -56,7 +56,15 @@ function checkAnswers() {
         q53: "Nella forma lineare possiede 3 carboni asimmetrici",
         q54: "serve come fonte di combustibile per la sintesi di ATP in questo tessuto",
         q55: "L’amilosio è un polisaccaride a catena lineare, mentre l’amilopectina è un polisaccaride ramificato",
-        q56: "I, III, IV"
+        q56: "I, III, IV",
+        q57: “Mostrano una piegatura a livello della catena idrofobica”,
+        q58: “Contengono una porzione idrofilica e una idrofobica”,
+        q59: “Presentano un doppio legame tra il terz’ultimo e quart’ultimo atomo di carbonio più distante dal carbonio carbossilico”,
+        q60: “1 molecola di glicerolo e 3 molecole di acidi grassi”,
+        q61: “Doppio legame; palmitoleico; minore”,
+        q62: “I lipidi sono molecole altamente idrofiliche, quindi viaggiano liberamente nel sangue”,
+        q63: “Mantiene la corretta fluidità dei vasi sanguigni”,
+        q64: “Presenza di un gruppo aminico”
     };
 
     const totalQuestions = Object.keys(answers).length; // Numero totale di domande
