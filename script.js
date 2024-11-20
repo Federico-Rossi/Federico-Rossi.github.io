@@ -56,8 +56,7 @@ function checkAnswers() {
         q53: "Nella forma lineare possiede 3 carboni asimmetrici",
         q54: "serve come fonte di combustibile per la sintesi di ATP in questo tessuto",
         q55: "L’amilosio è un polisaccaride a catena lineare, mentre l’amilopectina è un polisaccaride ramificato",
-        q56: "I, III, IV",
-        q57: "Mostrano una piegatura a livello della catena idrofobica”,
+        q56: "I, III, IV"
     };
 
     const totalQuestions = Object.keys(answers).length; // Numero totale di domande
