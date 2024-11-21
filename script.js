@@ -64,7 +64,14 @@ function checkAnswers() {
         q61: "doppio legame; palmitoleico; minore",
         q62: "I lipidi sono molecole altamente idrofiliche, quindi viaggiano liberamente nel sangue",
         q63: "Mantiene la corretta fluidità dei vasi sanguigni",
-        q64: "Presenza di un gruppo aminico"
+        q64: "Presenza di un gruppo aminico",
+        q65: "I lipidi coesistono uno accanto all’altro come unità discrete e le proteine fluttuano nel doppio strato, spostandosi lungo il piano della membrana",
+        q66: "Alle differenze nella composizione proteica e lipidica della faccia esterna ed interna del doppio strato di membrana",
+        q67: "Antiporto attivo",
+        q68: "Trasporto attivo",
+        q69: "Il gradiente elettrochimico è generato dalla diversa concentrazione degli ioni ai due lati della membrana",
+        q70: "Il potenziale di membrana è in parte dovuto al fatto che ci sono più cariche positive all’interno della cellula rispetto all’ambiente extracellulare",
+        q71: "Fosfolipidi, colesterolo e proteine"
     };
 
     const totalQuestions = Object.keys(answers).length; // Numero totale di domande
