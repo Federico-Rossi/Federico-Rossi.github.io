@@ -98,8 +98,13 @@ function checkAnswers() {
             feedbackElement.className = "feedback incorrect";
         }
     }
+
+    // Calcolo della percentuale
+    const percentage = ((score / totalQuestions) * 100).toFixed(2);
+
+    // Mostra il risultato con percentuale
     const resultElement = document.getElementById("result");
-    resultElement.innerText = `Hai totalizzato ${score} su ${totalQuestions} punti.`;
+    resultElement.innerText = `Hai totalizzato ${score} su ${totalQuestions} punti (${percentage}%).`;
     resultElement.classList.add("show"); // Aggiunge la classe per l'animazione
 
     document.getElementById("resetButton").style.display = "inline-block";
