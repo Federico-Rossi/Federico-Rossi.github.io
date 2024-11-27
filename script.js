@@ -71,7 +71,15 @@ function checkAnswers() {
         q68: "Trasporto attivo",
         q69: "Il gradiente elettrochimico è generato dalla diversa concentrazione degli ioni ai due lati della membrana",
         q70: "Il potenziale di membrana è in parte dovuto al fatto che ci sono più cariche positive all’interno della cellula rispetto all’ambiente extracellulare",
-        q71: "Fosfolipidi, colesterolo e proteine"
+        q71: "Fosfolipidi, colesterolo e proteine",
+        q72: "Un ribonucleotide è fosforilato sul carbonio 5'",
+        q73: "È una sequenza di 3 basi che codifica per un particolare amminoacido da incorporare in una proteina",
+        q74: "È la sintesi di mRNA da un DNA stampo",
+        q75: "I, III",
+        q76: "CGG",
+        q77: "L’energia rilasciata quando si rompe un legame fosfoanidridico dell’ATP",
+        q78: "Tutte le risposte sono corrette",
+        q79: "III, IV"
     };
 
     const totalQuestions = Object.keys(answers).length; // Numero totale di domande
