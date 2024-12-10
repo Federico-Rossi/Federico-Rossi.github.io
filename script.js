@@ -79,7 +79,26 @@ function checkAnswers() {
         q76: "CGG",
         q77: "L’energia rilasciata quando si rompe un legame fosfoanidridico dell’ATP",
         q78: "Tutte le risposte sono corrette",
-        q79: "III, IV"
+        q79: "III, IV",
+        q80: "unità sarcomeriche ripetute",
+        q81: "Acetilcolina",
+        q82: "reticolo sarcoplasmatico",
+        q83: "troponina",
+        q84: "Formazione di ponti trasversali",
+        q85: "Miosina",
+        q86: "Il filamento spesso si accorcia quando interagisce con il filamento sottile",
+        q87: "Non si formano ponti trasversali",
+        q88: "Deriverebbe la maggior parte della sua energia dal catabolismo del glucosio",
+        q89: "ATP",
+        q90: "Il corpo non produce più ATP, il che è necessario per far staccare le teste di miosina dall'actina",
+        q91: "2",
+        q92: "una diminuita interazione tra le teste della miosina e l'actina",
+        q93: "lattato",
+        q94: "La glicolisi è un processo che produce 2 moli di piruvato da ogni mole di D-glucosio",
+        q95: "rapida glicolisi",
+        q96: "La fosfofruttochinasi-1",
+        q97: "viene utilizzato dal fegato e riconvertito in glucosio",
+        q98: "Piruvato"
     };
 
     const totalQuestions = Object.keys(answers).length; // Numero totale di domande
