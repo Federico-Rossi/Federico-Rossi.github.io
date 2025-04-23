@@ -53,7 +53,15 @@ function checkAnswers() {
         q50: "RDA, AI, EAR, UL",
         q51: "isoleucina, istidina, leucina, lisina, metionina, fenilalanina, treonina, triptofano, valina",
         q52: "Nessuno",
-        q53: "È attivo biologicamente solo nella forma L"
+        q53: "È attivo biologicamente solo nella forma L",
+        q54: "Carnosina",
+        q55: "sono acidi grassi essenziali",
+        q56: "Modifica il bilancio energetico dell'organismo",
+        q57: "AMPK - mTOR",
+        q58: "Anidride carbonica",
+        q59: "Co-trasporto con Na+",
+        q60: "Agiscono da antagonisti degli estrogeni",
+        q61: "carotenoidi, glucosilonati e polifenali"
     };
 
     const totalQuestions = Object.keys(answers).length; // Numero totale di domande
