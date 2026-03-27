@@ -1,154 +1,224 @@
-function checkAnswers() {
-    let score = 0;
-    const answers = {
-        q1: "È un polimero del glucosio privo di ramificazioni",
-        q2: "glucosio-6-fosfatasi",
-        q3: "Tutte le risposte indicate sono corrette",
-        q4: "La fosforilazione, inattivazione, della glicogeno fosforilasi",
-        q5: "Glicogenolisi",
-        q6: "Fegato",
-        q7: "Fosfoenolpiruvato carbossichinasi, fruttosio-bisfosfatasi e glucosio-6-fosfatasi",
-        q8: "La produzione di NADPH/H+",
-        q9: "L'azione della glucosio 6-fosfato deidrogenasi",
-        q10: "Consiste in 10 reazioni",
-        q11: "Acetil-CoA",
-        q12: "Acqua",
-        q13: "È prodotto dall'organismo umano",
-        q14: "L'energia libera accumulata nel gradiente elettrochimico generato dalla catena di trasporto degli elettroni",
-        q15: "Catalizza l'ossidazione del citocromo c e la riduzione dell'ossigeno molecolare ad acqua",
-        q16: "Solo la subunità β catalizza la fosforilazione dell'ADP",
-        q17: "L'aumento dei livelli di ADP",
-        q18: "Fosforila l'ADP in ATP senza bisogno di ossigeno",
-        q19: "Immediatamente in tutti i casi di contrazione rapida",
-        q20: "Forme parzialmente ridotte dell'ossigeno molecolare",
-        q21: "Non esistono meccanismi fisiologici in grado di ridurre le specie pssidanti prevenendone il danno",
-        q22: "AMPK",
-        q23: "Si localizza nel nucleo della cellula dove regola l'espressione genetica",
-        q24: "Rappresenta l'insieme di tutte le molecole presenti in un campione biologico",
-        q25: "Transcrittoma",
-        q26: "Dall'acido citrico prodotto dalla condensazione di ossalacetato e piruvato decarbossilato",
-        q27: "Media il trasferimento dell'anione bicarbonato all'acetil-CoA per formare malonil-CoA",
-        q28: "Glucagone",
-        q29: "Acido stearico",
-        q30: "Alanina, glicina e valina",
-        q31: "Avviene in tutti i tessuti",
-        q32: "Alanina dai muscoli e glutammina da tutti gli altri",
-        q33: "È il prodotto di condesnsazione dell'anidride carbonica con l'ammoniaca",
-        q34: "La quantità di energia richiesta per mantenere l'organismo nella condizione di inattività",
-        q35: "2200 kcal per le femmine e 2500 kcal per i maschi",
-        q36: "Le proteine hanno dimesioni elevate per agire da ormoni",
-        q37: "Attiva la glicogenosintesi",
-        q38: "104, disolfuro, K+/Ca2++",
-        q39: "Dopo 24 ore di digiuno",
-        q40: "Il secondo messaggero cAMP",
-        q41: "Aumentano il metabolismo lipidico",
-        q42: "Tessuto adiposo",
-        q43: "Misurazione difettosa",
-        q44: "Richiede l'espressione della proteina UCP",
-        q45: "Si, in condizioni di digiuno prolungato",
-        q46: "Identifica la condizione nella quale il lattato nel sangue raggiunge i 4 mM.",
-        q47: "70 ml/kg/min con 170 bpm",
-        q48: "Sono agonisti del testosterone",
-        q49: "Tutte le affermazioni indicate sono false",
-        q50: "RDA, AI, EAR, UL",
-        q51: "isoleucina, istidina, leucina, lisina, metionina, fenilalanina, treonina, triptofano, valina",
-        q52: "Nessuno",
-        q53: "È attivo biologicamente solo nella forma L",
-        q54: "Carnosina",
-        q55: "sono acidi grassi essenziali",
-        q56: "Modifica il bilancio energetico dell'organismo",
-        q57: "AMPK - mTOR",
-        q58: "Anidride carbonica",
-        q59: "Co-trasporto con Na+",
-        q60: "Agiscono da antagonisti degli estrogeni",
-        q61: "carotenoidi, glucosilonati e polifenali"
-    };
-
-    const totalQuestions = Object.keys(answers).length; // Numero totale di domande
-
-    // Disabilita tutti i radio buttons
-    const radios = document.querySelectorAll('input[type="radio"]');
-    radios.forEach(radio => radio.disabled = true);
-
-    for (const [question, correctAnswer] of Object.entries(answers)) {
-        const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
-        const feedbackElement = document.getElementById(`${question}-feedback`);
-
-        if (userAnswer) {
-            if (userAnswer.value === correctAnswer) {
-                feedbackElement.textContent = "Risposta corretta!";
-                feedbackElement.className = "feedback correct";
-                score += 1;
-            } else {
-                feedbackElement.textContent = `Risposta errata. La risposta corretta è: ${correctAnswer}`;
-                feedbackElement.className = "feedback incorrect";
-            }
-        } else {
-            feedbackElement.textContent = "Nessuna risposta selezionata.";
-            feedbackElement.className = "feedback incorrect";
+// script.js - Dark Theme Version
+document.addEventListener('DOMContentLoaded', () => {
+  // --- Mobile Menu Logic ---
+  const mobileBtn = document.getElementById('mobileMenuBtn');
+  const mobileOverlay = document.getElementById('mobileOverlay');
+  const closeMenuBtn = document.getElementById('closeMenuBtn');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+  
+  function openMobileMenu() {
+    mobileOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  
+  function closeMobileMenu() {
+    mobileOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  
+  if (mobileBtn) mobileBtn.addEventListener('click', openMobileMenu);
+  if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMobileMenu);
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      closeMobileMenu();
+      const targetId = link.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        const targetEl = document.querySelector(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: 'smooth' });
         }
-    }
-
-    // Calcolo della percentuale
-    const percentage = ((score / totalQuestions) * 100).toFixed(2);
-
-    // Mostra il risultato con percentuale
-    const resultElement = document.getElementById("result");
-    resultElement.innerText = `Hai totalizzato ${score} su ${totalQuestions} punti (${percentage}%).`;
-    resultElement.classList.add("show"); // Aggiunge la classe per l'animazione
-
-    document.getElementById("resetButton").style.display = "inline-block";
-    window.scrollTo(0, document.body.scrollHeight);
-}
-
-
-
-function resetQuiz() {
-    // Riabilita tutti i radio buttons
-    const radios = document.querySelectorAll('input[type="radio"]');
-    radios.forEach(radio => radio.disabled = false); // Riabilita i radio button
-
-    radios.forEach(radio => {
-        radio.checked = false; // Deseleziona tutte le risposte
-        radio.parentElement.style.color = ""; // Reset del colore
+      }
     });
-
-    // Nascondi il risultato e resetta il punteggio
-    const resultElement = document.getElementById("result");
-    resultElement.textContent = ""; // Pulisce il testo del punteggio
-    resultElement.classList.remove("show"); // Rimuove la classe che mostra l'animazione
-
-    // Ripristina lo stato del pulsante di reset
-    document.getElementById("resetButton").style.display = "none";
-
-    // Pulisce i feedback delle domande
-    const feedbackElements = document.querySelectorAll('.feedback');
-    feedbackElements.forEach(feedback => feedback.textContent = ""); // Pulisce il feedback
-
-    // Scrolla alla parte superiore della pagina
-    window.scrollTo(0, 0);
-}
-
-// Mostra o nasconde il pulsante in base allo scroll
-window.onscroll = function() {
-    const scrollButton = document.getElementById("scrollButton");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        scrollButton.style.display = "flex";
-        scrollButton.innerHTML = "&#9650;"; // Freccia su (Unicode: U+9650)
-    } else {
-        scrollButton.style.display = "flex";
-        scrollButton.innerHTML = "&#9660;"; // Freccia giù (Unicode: U+9660)
+  });
+  
+  // --- Active navigation highlight on scroll ---
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  
+  function updateActiveNav() {
+    let current = '';
+    const scrollPos = window.scrollY + 150;
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active-nav');
+      const href = link.getAttribute('href').substring(1);
+      if (href === current) {
+        link.classList.add('active-nav');
+      }
+    });
+  }
+  
+  window.addEventListener('scroll', updateActiveNav);
+  updateActiveNav();
+  
+  // --- Testimonials Carousel Logic ---
+  const track = document.getElementById('testimonialTrack');
+  const prevBtn = document.getElementById('prevTesti');
+  const nextBtn = document.getElementById('nextTesti');
+  const dotsContainer = document.getElementById('sliderDots');
+  let currentIndex = 0;
+  let cardWidth = 0;
+  let visibleCards = 1;
+  
+  function updateCarouselDimensions() {
+    if (!track) return;
+    const containerWidth = track.parentElement.clientWidth;
+    const trackCards = Array.from(track.children);
+    if (trackCards.length === 0) return;
+    
+    if (containerWidth >= 992) visibleCards = 3;
+    else if (containerWidth >= 768) visibleCards = 2;
+    else visibleCards = 1;
+    
+    const gap = 32;
+    const cardBaseWidth = (containerWidth - (visibleCards - 1) * gap) / visibleCards;
+    trackCards.forEach(card => {
+      card.style.flex = `0 0 ${cardBaseWidth}px`;
+    });
+    cardWidth = cardBaseWidth + gap;
+    const maxIndex = Math.max(0, trackCards.length - visibleCards);
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+    track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    updateDots(trackCards.length);
+    setActiveDot();
+  }
+  
+  function updateDots(totalCards) {
+    if (!dotsContainer) return;
+    const dotsCount = Math.max(1, totalCards - visibleCards + 1);
+    dotsContainer.innerHTML = '';
+    for (let i = 0; i < dotsCount; i++) {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      dot.addEventListener('click', () => {
+        currentIndex = i;
+        track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        setActiveDot();
+      });
+      dotsContainer.appendChild(dot);
     }
-};
-
-// Funzione per scorrere su o giù
-function scrollPage() {
-    const currentScroll = window.scrollY || document.documentElement.scrollTop;
-    if (currentScroll > 100) {
-        // Se si è scesi, torna su
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-        // Se si è in cima, scendi in fondo
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    setActiveDot();
+  }
+  
+  function setActiveDot() {
+    const dots = document.querySelectorAll('.dot');
+    dots.forEach((dot, idx) => {
+      if (idx === currentIndex) dot.classList.add('active');
+      else dot.classList.remove('active');
+    });
+  }
+  
+  function slideNext() {
+    if (!track) return;
+    const totalCards = track.children.length;
+    const maxIndex = Math.max(0, totalCards - visibleCards);
+    if (currentIndex < maxIndex) {
+      currentIndex++;
+      track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+      setActiveDot();
     }
+  }
+  
+  function slidePrev() {
+    if (currentIndex > 0) {
+      currentIndex--;
+      track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+      setActiveDot();
+    }
+  }
+  
+  if (track && prevBtn && nextBtn) {
+    window.addEventListener('resize', () => {
+      updateCarouselDimensions();
+    });
+    updateCarouselDimensions();
+    prevBtn.addEventListener('click', slidePrev);
+    nextBtn.addEventListener('click', slideNext);
+    setTimeout(() => updateCarouselDimensions(), 100);
+  }
+  
+  // --- Gestione form di contatto con Formspree ---
+const contactForm = document.getElementById('contactForm');
+const formFeedback = document.getElementById('formFeedback');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Validazione base
+        const name = document.getElementById('name')?.value.trim();
+        const email = document.getElementById('email')?.value.trim();
+        
+        if (!name || !email) {
+            if (formFeedback) {
+                formFeedback.innerHTML = '<span style="color:#E67E22;">⚠️ Per favore, inserisci nome e email.</span>';
+                setTimeout(() => { if(formFeedback) formFeedback.innerHTML = ''; }, 3000);
+            }
+            return;
+        }
+        
+        // Mostra messaggio di caricamento
+        formFeedback.innerHTML = '<span style="color:#5DADE2;">📨 Invio in corso...</span>';
+        
+        try {
+            // Invia i dati a Formspree
+            const formData = new FormData(contactForm);
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                formFeedback.innerHTML = '<span style="color:#5DADE2;"> Grazie! Ti risponderò entro 24 ore. </span>';
+                contactForm.reset();
+                setTimeout(() => {
+                    if(formFeedback) formFeedback.innerHTML = '';
+                }, 5000);
+            } else {
+                throw new Error('Errore invio');
+            }
+        } catch (error) {
+            formFeedback.innerHTML = '<span style="color:#E67E22;">❌ Errore nell\'invio. Prova a ricaricare la pagina e riprova.</span>';
+            setTimeout(() => {
+                if(formFeedback) formFeedback.innerHTML = '';
+            }, 5000);
+        }
+    });
 }
+  
+  // --- Smooth scroll per tutti i link interni ---
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === "#" || targetId === "") return;
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+        if (mobileOverlay.classList.contains('open')) closeMobileMenu();
+      }
+    });
+  });
+  
+  // Header scroll effect
+  const header = document.querySelector('.site-header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header.style.padding = '0.6rem 0';
+      header.style.borderBottomColor = 'rgba(93, 173, 226, 0.3)';
+    } else {
+      header.style.padding = '1rem 0';
+      header.style.borderBottomColor = 'rgba(93, 173, 226, 0.2)';
+    }
+  });
+});
