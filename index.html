@@ -24,6 +24,7 @@
           <li><a href="#home" class="active-nav">Home</a></li>
           <li><a href="#about">Chi sono</a></li>
           <li><a href="#approach">Il mio metodo</a></li>
+          <li><a href="#transformations">Risultati</a></li>
           <li><a href="#testimonials">Esperienze</a></li>
           <li><a href="#contact">Contatti</a></li>
         </ul>
@@ -42,6 +43,7 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#about">Chi sono</a></li>
         <li><a href="#approach">Il mio metodo</a></li>
+        <li><a href="#transformations">Risultati</a></li>
         <li><a href="#testimonials">Esperienze</a></li>
         <li><a href="#contact">Contatti</a></li>
       </ul>
@@ -53,17 +55,17 @@
     <section id="home" class="hero">
       <div class="container hero-grid">
         <div class="hero-content">
-          <span class="hero-tag">Personal training · Benessere integrato</span>
+          <span class="hero-tag">Personal training · Ricomposizione</span>
           <h1>Ritrova il tuo equilibrio,<br> un movimento alla volta</h1>
           <p>Ti accompagno verso una versione più forte, consapevole e in armonia con te stesso. Nessuna imposizione, solo un percorso su misura.</p>
           <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary">Prenota una consulenza <i class="fas fa-arrow-right"></i></a>
+            <a href="#contact" class="btn btn-primary">Richiedi Informazioni <i class="fas fa-arrow-right"></i></a>
             <a href="#about" class="btn btn-outline">Scopri chi sono</a>
           </div>
         </div>
         <div class="hero-image">
           <div class="hero-img-wrapper">
-            <img src="https://images.pexels.com/photos/6454664/pexels-photo-6454664.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop" alt="Personal trainer in ambiente naturale" loading="lazy">
+            <img src="1.jpeg" alt="Personal trainer in ambiente naturale" loading="lazy">
           </div>
         </div>
       </div>
@@ -74,16 +76,16 @@
       <div class="container about-container">
         <div class="about-image">
           <div class="about-img-card">
-            <img src="https://images.pexels.com/photos/6454679/pexels-photo-6454679.jpeg?auto=compress&cs=tinysrgb&w=800&h=900&fit=crop" alt="Ritratto personal trainer" loading="lazy">
+            <img src="1.jpeg" alt="Ritratto personal trainer" loading="lazy">
           </div>
         </div>
         <div class="about-text">
           <div class="section-label">Chi sono</div>
-          <h2>Matteo, personal trainer & coach del movimento</h2>
-          <p>La mia missione è aiutarti a riscoprire il piacere di muoverti senza pressioni, con un approccio che unisce preparazione atletica, ascolto e consapevolezza. Laureato in Scienze Motorie e specializzato in allenamento funzionale, ho affiancato centinaia di persone – dai neofiti agli sportivi esperti – a raggiungere i propri obiettivi in modo sostenibile.</p>
+          <h2>Federico, laureato in Scienze Motorie & Personal Trainer</h2>
+          <p>La mia missione è aiutarti a riscoprire il piacere di muoverti senza pressioni, con un approccio che unisce preparazione, ascolto e consapevolezza. Laureato in Scienze Motorie all'università di Padova e specializzato nell'aumento della massa magra, affianco persone – dai neofiti agli sportivi esperti – nel raggiungere i propri obiettivi in modo sostenibile.</p>
           <p>Credo che ogni corpo sia unico: il mio lavoro parte da te, dalle tue esigenze, dai tuoi tempi e dai tuoi desideri. Non esistono ricette uguali per tutti, ma percorsi disegnati su misura.</p>
           <div class="signature">
-            <span>Matteo R.</span>
+            <span>Federico R.</span>
             <i class="fas fa-dumbbell"></i>
           </div>
         </div>
@@ -123,7 +125,70 @@
       </div>
     </section>
 
-    <!-- Testimonials -->
+<!-- Before & After Section - Versione con slider interattivo -->
+<section id="transformations" class="transformations">
+    <div class="container">
+        <div class="section-header center">
+            <div class="section-label">Risultati reali</div>
+            <h2>Prima & Dopo</h2>
+            <p>Trascina il cursore per vedere la trasformazione. I progressi dei miei clienti parlano da soli.</p>
+        </div>
+        
+        <div class="transformations-grid">
+            <!-- Trasformazione 1 - Marco -->
+            <div class="transformation-card">
+                <div class="slider-container" id="slider1">
+                    <div class="slider-image">
+                        <img src="1.jpeg" alt="Dopo" class="after-img">
+                        <div class="slider-overlay">
+                            <img src="1.jpeg" alt="Prima">
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="slider-input">
+                        <div class="slider-handle">
+                            <div class="slider-handle-icon">
+                                <i class="fas fa-arrows-alt-h"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="transformation-info">
+                    <h3>Marco - 6 mesi di percorso</h3>
+                    <p class="results">-12 kg · +15% massa muscolare · Miglioramento posturale</p>
+                    <div class="client-quote">"Matteo mi ha cambiato la vita. Ora mi sento più forte e sicuro di me."</div>
+                </div>
+            </div>
+
+            <!-- Trasformazione 2 - Chiara -->
+            <div class="transformation-card">
+                <div class="slider-container" id="slider2">
+                    <div class="slider-image">
+                        <img src="1.jpeg" alt="Dopo" class="after-img">
+                        <div class="slider-overlay">
+                            <img src="1.jpeg" alt="Prima">
+                        </div>
+                        <input type="range" min="0" max="100" value="50" class="slider-input">
+                        <div class="slider-handle">
+                            <div class="slider-handle-icon">
+                                <i class="fas fa-arrows-alt-h"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="transformation-info">
+                    <h3>Chiara - 4 mesi di percorso</h3>
+                    <p class="results">-8 kg · +20% tonificazione · Eliminato mal di schiena</p>
+                    <div class="client-quote">"Finalmente ho ritrovato la fiducia nel mio corpo. Grazie Matteo!"</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="center" style="margin-top: 3rem;">
+            <a href="#contact" class="btn btn-primary">Inizia anche tu il tuo percorso <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
     <section id="testimonials" class="testimonials">
       <div class="container">
         <div class="section-header center">
@@ -207,9 +272,7 @@
             <li><i class="fas fa-map-marker-alt"></i> Rovigo / Online in tutta Italia</li>
           </ul>
           <div class="social-mini">
-            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/federico.rossi___/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
         <div class="contact-form-card">
@@ -238,8 +301,8 @@
   <footer class="footer">
     <div class="container footer-container">
       <div class="footer-brand">
-        <div class="logo-footer">Dark<span>Trainer</span></div>
-        <p>Personal trainer · Movimento consapevole · Equilibrio</p>
+        <div class="logo-footer">Rossi<span>Federico</span></div>
+        <p>Personal trainer · Benessere · Equilibrio</p>
       </div>
       <div class="footer-links">
         <a href="#home">Home</a>
@@ -248,8 +311,7 @@
         <a href="#contact">Contatti</a>
       </div>
       <div class="footer-copy">
-        <p>&copy; 2025 Dark Trainer. Tutti i diritti riservati.</p>
-        <p class="credits">Sito vetrina — Solo presentazione professionale</p>
+        <p>&copy; 2026 Tutti i diritti riservati.</p>
       </div>
     </div>
   </footer>
