@@ -222,3 +222,78 @@ if (contactForm) {
     }
   });
 });
+
+    // --- Slider Before/After Interattivo ---
+    function initBeforeAfterSliders() {
+        const sliders = document.querySelectorAll('.slider-container');
+        
+        sliders.forEach(container => {
+            const sliderInput = container.querySelector('.slider-input');
+            const overlay = container.querySelector('.slider-overlay');
+            const handle = container.querySelector('.slider-handle');
+            
+            if (!sliderInput || !overlay || !handle) return;
+            
+            // Imposta la posizione iniziale
+            const initialValue = sliderInput.value;
+            overlay.style.width = initialValue + '%';
+            handle.style.left = initialValue + '%';
+            
+            // Aggiungi indicatore percentuale opzionale
+            const percentageSpan = document.createElement('div');
+            percentageSpan.className = 'slider-percentage';
+            percentageSpan.textContent = Math.round(initialValue) + '%';
+            container.querySelector('.slider-image').appendChild(percentageSpan);
+            
+            // Funzione per aggiornare lo slider
+            function updateSlider(value) {
+                const percent = value;
+                overlay.style.width = percent + '%';
+                handle.style.left = percent + '%';
+                percentageSpan.textContent = Math.round(percent) + '%';
+                
+                // Effetto visivo: cambia colore della maniglia in base alla percentuale
+                if (percent < 30) {
+                    handle.style.background = '#E67E22';
+                } else if (percent > 70) {
+                    handle.style.background = '#2ECC71';
+                } else {
+                    handle.style.background = '#5DADE2';
+                }
+                
+                // Aggiorna anche il colore dell'icona
+                const icon = handle.querySelector('.slider-handle-icon');
+                if (icon) {
+                    icon.style.background = handle.style.background;
+                }
+            }
+            
+            // Evento per quando si trascina lo slider
+            sliderInput.addEventListener('input', function(e) {
+                updateSlider(e.target.value);
+            });
+            
+            // Evento per quando si clicca direttamente sull'immagine
+            const imageContainer = container.querySelector('.slider-image');
+            imageContainer.addEventListener('click', function(e) {
+                const rect = imageContainer.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const percent = (x / rect.width) * 100;
+                const clampedPercent = Math.min(100, Math.max(0, percent));
+                sliderInput.value = clampedPercent;
+                updateSlider(clampedPercent);
+            });
+            
+            // Effetto hover sulla maniglia
+            handle.addEventListener('mouseenter', () => {
+                handle.style.boxShadow = '0 0 20px rgba(93, 173, 226, 0.8)';
+            });
+            
+            handle.addEventListener('mouseleave', () => {
+                handle.style.boxShadow = '0 0 15px rgba(93, 173, 226, 0.5)';
+            });
+        });
+    }
+    
+    // Inizializza gli slider quando la pagina è caricata
+    initBeforeAfterSliders();
